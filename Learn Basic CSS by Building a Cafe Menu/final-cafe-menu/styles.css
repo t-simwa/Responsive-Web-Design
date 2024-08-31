@@ -1,0 +1,114 @@
+body {
+    /* Set the background image and apply general styles */
+    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    /* Style for main heading */
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+h2 {
+    /* Style for section headings */
+    font-size: 30px;
+}
+
+.established {
+    /* Italicize the "Est. 2020" text */
+    font-style: italic;
+}
+
+h1, h2, p {
+    /* Center-align all headings and paragraphs */
+    text-align: center;
+}
+
+.menu {
+    /* Style for the menu container */
+    width: 80%;
+    background-color: burlywood;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    max-width: 500px; /* Set a max width for better responsiveness */
+}
+
+img {
+    /* Center-align images */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr {
+    /* Style for horizontal rules */
+    height: 2px;
+    background-color: brown;
+    border-color: brown;
+}
+
+.bottom-line {
+    /* Add space above the bottom divider */
+    margin-top: 25px;
+}
+
+h1, h2 {
+    /* Apply a specific font family to headings */
+    font-family: Impact, serif;
+}
+
+.item p {
+    /* Style for paragraph elements within menu items */
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.flavor, .dessert {
+    /* Align text for flavor and dessert names */
+    text-align: left;
+    width: 75%;
+}
+
+.price {
+    /* Align text for prices */
+    text-align: right;
+    width: 25%;
+}
+
+/* FOOTER */
+
+footer {
+    /* Style for footer text */
+    font-size: 14px;
+}
+
+.address {
+    /* Adjust margin below the address text */
+    margin-bottom: 5px;
+}
+
+a {
+    /* Base color for links */
+    color: black;
+}
+
+a:visited {
+    /* Color for visited links */
+    color: black;
+}
+
+a:hover {
+    /* Color for links on hover */
+    color: brown;
+}
+
+a:active {
+    /* Color for links when active */
+    color: brown;
+}
