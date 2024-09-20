@@ -1,0 +1,132 @@
+/* Set the body element to occupy the full width and height of the viewport.
+   Remove the default margin and set the background image and color properties */
+   body {
+    width: 100%; /* Full width of the viewport */
+    height: 100%; /* Full height of the viewport */
+    margin: 0; /* Remove default margin */
+    font-size: 16px; /* Base font size */
+    background-image: url("football-wallpaper.jpg"); /* Set background image */
+    font-family: "Playfair Display", serif; /* Set font family for body text */
+    font-optical-sizing: auto; /* Enable optical sizing for the font */
+    font-weight: 400; /* Normal font weight */
+    font-style: normal; /* Regular font style */
+    background-repeat: no-repeat; /* Prevent background from repeating */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center-align the background image */
+}
+
+/* Center-align h1 and p elements with a margin on all sides */
+h1, p {
+    margin: 1em auto; /* Apply margin on all sides */
+    text-align: center; /* Center-align the text */
+}
+
+/* Style the form to be responsive with minimum, maximum, and percentage widths,
+   centered on the page with padding at the bottom */
+form {
+    width: 60vw; /* Form width relative to viewport width */
+    max-width: 500px; /* Maximum width for larger screens */
+    min-width: 300px; /* Minimum width for smaller screens */
+    margin: 0 auto; /* Center the form */
+    padding-bottom: 2em; /* Add padding below the form */
+}
+
+/* Style fieldsets with no border and padding, 
+   with a visual bottom border */
+fieldset {
+    border: none; /* Remove the default border */
+    padding: 2rem 0; /* Vertical padding inside the fieldset */
+}
+
+/* Set label elements to display as block elements with margin for spacing */
+label {
+    display: block; /* Make the label a block element */
+    margin: 0.5rem 0; /* Add margin above and below the label */
+}
+
+/* Set input, textarea, and select elements to take up the full width,
+   with margin above for spacing and a minimum height */
+input, textarea, select {
+    margin: 10px 0 0 0; /* Add margin above the elements */
+    width: 100%; /* Make the elements take up the full width of the parent */
+    min-height: 2em; /* Ensure a minimum height for input elements */
+}
+
+/* Ensure inline elements have default width and proper spacing, 
+   with vertical alignment adjusted */
+.inline {
+    width: unset; /* Reset the width to its default value */
+    margin: 0 0.5em 0 0; /* Add spacing between inline elements */
+    vertical-align: middle; /* Vertically align inline elements */
+}
+
+/* Apply background color, border color, and text color to input and textarea fields */
+input, textarea {
+    background-color: #0a0a23; /* Set a dark background color */
+    border: 1px solid #0a0a23; /* Set the border color to match the background */
+    color: #ffffff; /* Set text color to white */
+}
+
+/* Style the submit button with specific dimensions and colors, 
+   and center it horizontally */
+input[type="submit"] {
+    display: block; /* Make the submit button a block element */
+    width: 60%; /* Set the width to 60% of the parent */
+    margin: 1em auto; /* Center the button horizontally */
+    height: 2em; /* Set a fixed height */
+    font-size: 1.1rem; /* Increase font size for better readability */
+    background-color: #3b3b4f; /* Set a dark background color */
+    border-color: white; /* Set the border color to white */
+    min-width: 300px; /* Ensure the button has a minimum width */
+}
+
+/* Set elements with the inline class to display inline */
+.inline {
+    display: inline; /* Display inline */
+}
+
+/* Style the div container to be responsive, with padding and centered alignment,
+   and set background and text colors */
+div {
+    width: 80%; /* Set the width of the container to 80% */
+    margin-left: auto; /* Center the container horizontally */
+    margin-right: auto; /* Center the container horizontally */
+    padding: 20px; /* Add padding inside the container */
+    max-width: 500px; /* Set a maximum width for responsiveness */
+    background-color: #1b1b32; /* Set a dark background color */
+    color: #f5f6f7; /* Set light text color */
+    margin-top: 5%; /* Add margin at the top */
+    margin-bottom: 10%; /* Add margin at the bottom */
+}
+
+/* Style options within select dropdowns with the appropriate font properties */
+option {
+    font-family: "Playfair Display", serif; /* Set font family */
+    font-optical-sizing: auto; /* Enable optical sizing */
+    font-weight: 400; /* Set normal font weight */
+    font-style: normal; /* Regular font style */
+}
+
+/* Style the h1 heading with a unique font family and default weight */
+h1 {
+    font-family: "Fascinate Inline", system-ui; /* Apply a unique font for headings */
+    font-weight: 400; /* Set normal font weight */
+    font-style: normal; /* Regular font style */
+}
+
+/* Style the class format with specific font properties */
+.format {
+    font-family: "Playfair Display", serif; /* Set font family */
+    font-optical-sizing: auto; /* Enable optical sizing */
+    font-weight: 400; /* Set normal font weight */
+    font-style: normal; /* Regular font style */
+}
+
+/* Center-align images by making them block elements and applying auto margins */
+img {
+    display: block; /* Make images block elements */
+    margin-left: auto; /* Center the image horizontally */
+    margin-right: auto; /* Center the image horizontally */
+    margin-bottom: 0; /* Remove bottom margin */
+    margin-top: 5%; /* Add margin at the top */
+}

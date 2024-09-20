@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Football Survey Form</title>
+        <!-- Link to external CSS file for styling -->
+        <link rel="stylesheet" href="styles.css">
+        <!-- Preconnect to Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Google Fonts for custom fonts in the page -->
+        <link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div>
+        <!-- Main heading for the form -->
+        <h1 id="title">FOOTBALL SURVEY FORM</h1>
+        <!-- Brief description under the heading -->
+        <p id="description">Thank you for taking the time to participate in this survey.</p>
+        <!-- Football icon image -->
+        <img src="football-icon.png" alt="football-icon" width="100px"/>
+        <!-- Form element using POST method, with an action URL for submission -->
+        <form method="post" action='https://register-demo.freecodecamp.org' id="survey-form">
+            <fieldset>
+                <!-- Label and input field for the user's name, marked as required -->
+                <label for="name" id="name-label">Name: 
+                    <input id="name" name="name" type="text" required placeholder="Enter your name" class="format"/>
+               </label>
+               <!-- Label and input field for the user's email, marked as required -->
+               <label for="email" id="email-label">Email: 
+                   <input id="email" name="email" type="email" required placeholder="Enter your email" class="format"/>
+               </label>
+               <!-- Label and input field for the user's age, with min and max values defined -->
+               <label for="number" id="number-label">Age: 
+                   <input id="number" type="number" name="age" min="13" max="120" placeholder="Enter your age" class="format"/>
+               </label>
+            </fieldset>
+            <fieldset>
+              <!-- Dropdown for selecting a supported football team -->
+              <legend>Which of the following football teams do you support?</legend>
+              <label for="dropdown">
+                  <select id="dropdown" name="dropdown">
+                    <option value="" class="format">(select one)</option>
+                    <option value="1">Manchester United</option>
+                    <option value="2">Real Madrid</option>
+                    <option value="3">FC Bayern Munich</option>
+                    <option value="4">Paris St-Germain</option>
+                    <option value="4">AC Milan</option>
+                  </select>
+                </label>
+            </fieldset>
+            <fieldset>
+                <!-- Radio button options to capture satisfaction with team performance -->
+                <legend>Are you satisfied with the current performance of your football team?</legend>
+                <label for="satisfied">
+                  <input id="satisfied" type="radio" name="team-satisfaction" checked class="inline"> Yes.
+                </label>
+                <label for="not-satisfied">
+                  <input id="not-satisfied" type="radio" name="team-satisfaction" class="inline"> No.
+                </label>
+            </fieldset>
+            <fieldset>
+                <!-- Checkbox options to capture aspects the user would like the team to improve on -->
+                <legend>What would you like to see your football team improve on?</legend>
+                <label for="tactical">
+                    <input id="tactical" type="checkbox" name="tactical" value="1" class="inline"> Tactical Discipline
+                </label>
+                <label for="conditioning">
+                    <input id="conditioning" type="checkbox" name="conditioning" value="2" class="inline"> Physical Conditioning
+                </label>
+                <label for="development">
+                    <input id="development" type="checkbox" name="development" value="3" class="inline"> Player Development
+                </label>
+                <label for="cohesion">
+                    <input id="cohesion" type="checkbox" name="cohesion" value="4" class="inline"> Team Cohesion
+                </label>
+                <label for="mental-strength">
+                    <input id="mental-strength" type="checkbox" name="mental-strength" value="5" class="inline"> Mental Strength
+                </label>
+            </fieldset>
+            <fieldset>
+                <!-- Textarea for the user to provide detailed feedback -->
+                <legend>Provide a brief description of what you'd like to see your team improve on:</legend>
+                <label for="improve">
+                    <textarea id="improve" name="improve" rows="3" cols="60" placeholder="I'd like to see my team improve on physical conditioning..." class="format"></textarea>
+                  </label>
+            </fieldset>
+            <!-- Submit button for form submission -->
+            <input id="submit" type="submit" value="Submit" />
+        </div>
+        </form>
+    </body>
+</html>
