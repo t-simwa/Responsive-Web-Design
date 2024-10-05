@@ -1,0 +1,59 @@
+/* Style for the canvas that holds the painting blocks.
+   Set size, background color, and apply a blur effect */
+   .canvas {
+    width: 500px; /* Width of the canvas */
+    height: 600px; /* Height of the canvas */
+    background-color: #4d0f00; /* Dark red background color */
+    overflow: hidden; /* Ensure no content overflows */
+    filter: blur(2px); /* Slight blur for artistic effect */
+}
+
+/* Style for the frame surrounding the canvas.
+   Adds padding, a solid black border, and centers the painting */
+.frame {
+    border: 50px solid black; /* Thick black border representing the frame */
+    width: 500px; /* Width of the frame matches the canvas width */
+    padding: 50px; /* Inner padding around the canvas */
+    margin: 20px auto; /* Center the frame horizontally and add margin */
+}
+
+/* Style for the first block of the painting (top color block).
+   Sets size, background color, shadow, and applies a slight rotation */
+.one {
+    width: 425px; /* Width smaller than the canvas */
+    height: 150px; /* Block height */
+    background-color: #efb762; /* Light orange color */
+    margin: 20px auto; /* Center the block horizontally with margin */
+    box-shadow: 0 0 3px 3px #efb762; /* Add a glowing shadow effect */
+    border-radius: 9px; /* Slight rounding of corners */
+    transform: rotate(-0.6deg); /* Slight tilt for a natural look */
+}
+
+/* Style for the second block of the painting (middle color block).
+   Similar to the first block but larger, different color, and rotated slightly */
+.two {
+    width: 475px; /* Width close to the canvas width */
+    height: 200px; /* Block height */
+    background-color: #8f0401; /* Dark red color */
+    margin: 0 auto 20px; /* Center horizontally, add bottom margin */
+    box-shadow: 0 0 3px 3px #8f0401; /* Glowing shadow effect */
+    border-radius: 8px 10px; /* Rounded corners */
+    transform: rotate(0.4deg); /* Slight tilt in opposite direction */
+}
+
+/* Apply a mild blur effect to both .one and .two blocks */
+.one, .two {
+    filter: blur(1px); /* Blur for artistic texture */
+}
+
+/* Style for the third block of the painting (bottom color block).
+   Set size, color, and more pronounced blur */
+.three {
+    width: 91%; /* Width slightly smaller than the canvas */
+    height: 28%; /* Height relative to the canvas */
+    background-color: #b20403; /* Darker red color */
+    margin: auto; /* Center the block */
+    filter: blur(2px); /* Stronger blur for texture */
+    box-shadow: 0 0 5px 5px #b20403; /* Glowing shadow effect */
+    border-radius: 30px 25px 60px 12px; /* Asymmetrical rounded corners */
+}
