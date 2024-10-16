@@ -1,0 +1,122 @@
+/* Applies box-sizing rule to all elements */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  /* Set base font size */
+  font-size: 16px;
+}
+
+body {
+  /* Set body font-family to 'Open Sans' */
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Styling for the nutrition label container */
+.label {
+  border: 2px solid black;  /* Solid black border */
+  width: 270px;             /* Set fixed width */
+  margin: 20px auto;        /* Center the label horizontally with margin */
+  padding: 0 7px;           /* Padding for internal spacing */
+}
+
+/* Styling for the header title */
+header h1 {
+  text-align: center;       /* Center-align the title */
+  margin: -4px 0;           /* Adjust margin for better positioning */
+  letter-spacing: 0.15px;   /* Add slight spacing between letters */
+}
+
+/* General paragraph styling */
+p {
+  margin: 0;                /* Remove default margin */
+  display: flex;            /* Use flexbox layout */
+  justify-content: space-between;  /* Align text to both ends */
+}
+
+/* Styling for dividers */
+.divider {
+  border-bottom: 1px solid #888989;  /* Light gray bottom border */
+  margin: 2px 0;                     /* Minimal margin between dividers */
+}
+
+/* Bold text style */
+.bold {
+  font-weight: 800;          /* Heavy font weight */
+}
+
+/* Large divider style */
+.large {
+  height: 10px;              /* Increase height for large divider */
+}
+
+/* Styling for large and medium dividers */
+.large, .medium {
+  background-color: black;   /* Solid black background */
+  border: 0;                 /* Remove border */
+}
+
+/* Medium divider style */
+.medium {
+  height: 5px;               /* Set medium divider height */
+}
+
+/* Smaller font size for specific text */
+.small-text {
+  font-size: 0.85rem;         /* Set small font size */
+}
+
+/* Styling for the calorie info section */
+.calories-info {
+  display: flex;              /* Flexbox layout */
+  justify-content: space-between; /* Align elements on both sides */
+  align-items: flex-end;      /* Align items to the bottom */
+}
+
+/* Remove margin for calorie section headers */
+.calories-info h2 {
+  margin: 0;
+}
+
+/* Set font size and weight for calorie value */
+.left-container p {
+  margin: -5px -2px;
+  font-size: 2em;             /* Large font size */
+  font-weight: 700;           /* Bold weight */
+}
+
+/* Set font size and weight for calorie number */
+.calories-info span {
+  margin: -7px -2px;
+  font-size: 2.4em;           /* Very large font size */
+  font-weight: 700;           /* Bold weight */
+}
+
+/* Align text to the right */
+.right {
+  justify-content: flex-end;
+}
+
+/* Add left margin for indented text */
+.indent {
+  margin-left: 1em;
+}
+
+/* Add larger left margin for double indented text */
+.double-indent {
+  margin-left: 2em;
+}
+
+/* Apply bottom border to daily value paragraphs unless they have the 'no-divider' class */
+.daily-value p:not(.no-divider) {
+  border-bottom: 1px solid #888989;
+}
+
+/* Styling for the footnote at the bottom */
+.note {
+  font-size: 0.6rem;          /* Very small font size */
+  margin: 5px 0;              /* Margin for spacing */
+  padding: 0 8px;             /* Padding for internal spacing */
+  text-indent: -8px;          /* Negative indent to outdent text */
+}
