@@ -1,0 +1,213 @@
+/* Apply smooth scrolling if user prefers animations */
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        scroll-behavior: smooth;
+    }
+}
+
+/* General body styling */
+body {
+    background: #f5f6f7; /* Light gray background color */
+    color: #1b1b32; /* Dark text color */
+    font-family: Helvetica, sans-serif; /* Helvetica font for content */
+    margin: 0; /* Remove default body margin */
+}
+
+/* Header styling */
+header {
+    width: 100%;
+    height: 50px; /* Fixed height for header */
+    background-color: #1b1b32; /* Dark background color */
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Align items vertically centered */
+    position: fixed; /* Fix the header at the top */
+    top: 0; /* Header at the top of the viewport */
+}
+
+/* Logo image inside the header */
+#logo {
+    width: max(10rem, 18vw); /* Responsive width, based on viewport width */
+    background-color: #0a0a23; /* Darker background for logo */
+    aspect-ratio: 35 / 4; /* Aspect ratio to maintain image proportion */
+    padding: 0.4rem; /* Small padding around the logo */
+}
+
+/* Main heading (H1) styling */
+h1 {
+    color: #f1be32; /* Bright yellow color */
+    font-size: min(5vw, 1.2em); /* Responsive font size */
+    text-align: center; /* Center align the heading */
+}
+
+/* Navigation container */
+nav {
+    width: 50%;
+    max-width: 300px; /* Set maximum width for the navigation */
+    height: 50px; /* Same height as the header */
+}
+
+/* Navigation list */
+nav > ul {
+    display: flex; /* Flex layout for the nav items */
+    justify-content: space-evenly; /* Evenly spaced items */
+    flex-wrap: wrap; /* Allow wrapping of nav items */
+    align-items: center; /* Vertically align items */
+    padding-inline-start: 0; /* Remove default list padding */
+    margin-block: 0; /* Remove default margin */
+    height: 100%; /* Full height */
+}
+
+/* Navigation list items */
+nav > ul > li {
+    color: #dfdfe2; /* Light color for the text */
+    margin: 0 0.2rem; /* Small margin between items */
+    padding: 0.2rem; /* Padding inside each item */
+    display: block; /* Block-level list item */
+}
+
+/* Hover effect for nav items */
+nav > ul > li:hover {
+    background-color: #dfdfe2; /* Background color change on hover */
+    color: #1b1b32; /* Dark text color on hover */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Links inside nav items */
+li > a {
+    color: inherit; /* Inherit color from parent */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Main content with padding to avoid header overlap */
+main {
+    padding-top: 50px; /* Offset to avoid overlap with fixed header */
+}
+
+/* Section styling */
+section {
+    width: 80%; /* 80% width of the parent container */
+    margin: 0 auto 10px auto; /* Center the section with margin */
+    max-width: 600px; /* Set a max width for content */
+}
+
+/* Common font styling for H1 and H2 headings */
+h1, h2 {
+    font-family: Verdana, Tahoma, sans-serif; /* Consistent font styling */
+}
+
+/* H2 heading with a border below and margin adjustment */
+h2 {
+    border-bottom: 4px solid #dfdfe2; /* Light gray border below */
+    margin-top: 0px; /* Remove top margin */
+    padding-top: 60px; /* Padding to separate content */
+}
+
+/* Padding and spacing for form info sections */
+.info {
+    padding: 10px 0 0 5px; /* Adjust padding */
+}
+
+/* Form row spacing */
+.formrow {
+    margin-top: 30px; /* Space above form rows */
+    padding: 0px 15px; /* Padding inside form rows */
+}
+
+/* Input field styling */
+input {
+    font-size: 1rem; /* Standard font size for inputs */
+}
+
+/* Label and input alignment */
+.info label, .info input {
+    display: inline-block; /* Keep label and input on the same line */
+}
+
+/* Input width adjustment */
+.info input {
+    width: 50%; /* Set input width */
+    text-align: left; /* Left align text inside input */
+}
+
+/* Label width and alignment */
+.info label {
+    width: 10%; /* Set label width */
+    min-width: 55px; /* Minimum width for smaller screens */
+    text-align: right; /* Align label text to the right */
+}
+
+/* Styling for question blocks */
+.question-block {
+    text-align: left; /* Left-align text */
+    display: block; /* Block-level container */
+    width: 100%; /* Full width */
+    margin-top: 20px; /* Space above question block */
+    padding-top: 5px; /* Padding at the top */
+}
+
+/* H3 styling for question headers */
+h3 {
+    margin-top: 5px; /* Small margin above */
+    padding-left: 15px; /* Padding to indent the heading */
+    font-size: 1.375rem; /* Adjust font size */
+}
+
+/* Prefix for H3 question titles */
+h3::before {
+    content: "Question #"; /* Add "Question #" before each question */
+}
+
+/* Remove border and padding for question fieldsets */
+.question {
+    border: none; /* No border for question sets */
+    padding-bottom: 0; /* Remove bottom padding */
+}
+
+/* Remove list styling from answer lists */
+.answers-list {
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+}
+
+/* Button styling for form submission */
+button {
+    display: block; /* Block-level button */
+    margin: 40px auto; /* Center the button with margin */
+    width: 40%; /* Set button width */
+    padding: 15px; /* Padding inside the button */
+    font-size: 1.438rem; /* Larger font size */
+    background: #d0d0d5; /* Light gray background */
+    border: 3px solid #3b3b4f; /* Darker border */
+}
+
+/* Footer styling */
+footer {
+    background-color: #2a2a40; /* Dark footer background */
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center content */
+}
+
+/* Text styling inside footer */
+footer, footer a {
+    color: #dfdfe2; /* Light gray color */
+}
+
+/* Address block styling */
+address {
+    text-align: center; /* Center align text */
+    padding: 0.3em; /* Padding inside address */
+}
+
+/* Screen reader-only class for accessibility */
+.sr-only {
+    position: absolute; /* Remove from flow */
+    width: 1px; /* Minimize size */
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0); /* Clip to hide */
+    white-space: nowrap; /* Prevent wrapping */
+    border: 0; /* Remove border */
+}
