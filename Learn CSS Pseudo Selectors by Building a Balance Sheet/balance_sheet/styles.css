@@ -1,0 +1,177 @@
+/* Hides elements with class 'sr-only' visually but keeps them accessible to screen readers */
+span[class~="sr-only"] {
+    border: 0 !important;               /* Removes border to prevent visual artifacts */
+    clip: rect(1px, 1px, 1px, 1px) !important; /* Clips element so it remains in layout but isn't displayed */
+    clip-path: inset(50%) !important;   /* Additional clipping for compatibility */
+    height: 1px !important;             /* Sets minimal height */
+    width: 1px !important;              /* Sets minimal width */
+    position: absolute !important;      /* Places it out of document flow */
+    overflow: hidden !important;        /* Hides overflow to avoid visual bleed */
+    white-space: nowrap !important;     /* Prevents element from wrapping */
+    padding: 0 !important;              /* Removes padding */
+    margin: -1px !important;            /* Adds minimal margin */
+}
+
+/* Applies box-sizing globally, ensuring padding and border are included in element’s total width and height */
+html {
+    box-sizing: border-box;
+}
+
+/* Basic styling for the body text and layout */
+body {
+    font-family: sans-serif; /* Sets default font for readability */
+    color: #0a0a23;          /* Applies a dark color for high contrast */
+}
+
+/* Styles the main heading (h1) for layout and visual hierarchy */
+h1 {
+    max-width: 37.25rem;     /* Restricts width for readability on large screens */
+    margin: 0 auto;          /* Centers h1 horizontally */
+    padding: 1.5rem 1.25rem; /* Adds padding for spacing around the text */
+}
+
+/* Arranges span elements in h1 in a column, with reversed order for a balanced layout */
+h1 .flex {
+    display: flex;               /* Flex layout for easy column alignment */
+    flex-direction: column-reverse; /* Reverses order of child spans */
+    gap: 1rem;                   /* Adds space between child elements */
+}
+
+/* Smaller font size for the first span in h1 to emphasize hierarchy */
+h1 .flex span:first-of-type {
+    font-size: 0.7em;
+}
+
+/* Larger font size for the second span to give visual emphasis */
+h1 .flex span:last-of-type {
+    font-size: 1.2em;
+}
+
+/* Styles the main section, centralizes and borders for distinction */
+section {
+    max-width: 40rem;        /* Constrains section width for readability */
+    margin: 0 auto;          /* Centers the section */
+    border: 2px solid #d0d0d5; /* Adds light border for visual separation */
+}
+
+/* Aligns the year display to the right, fixes it at the top with a dark background */
+#years {
+    display: flex;                 /* Flex layout for child alignment */
+    justify-content: flex-end;     /* Right-aligns years within container */
+    position: sticky;              /* Sticks to the top of the viewport when scrolling */
+    z-index: 999;                  /* Places it above other elements */
+    top: 0;                        /* Fixes it at the top of the viewport */
+    background: #0a0a23;           /* Dark background for emphasis */
+    color: #fff;                   /* Light text for contrast */
+    padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0; /* Adds padding around content */
+    margin: 0 -2px;                /* Centers years display horizontally */
+}
+
+/* Bold text and right-aligns each year */
+#years span[class] {
+    font-weight: bold;
+    width: 4.5rem;             /* Fixed width for consistent alignment */
+    text-align: right;         /* Right-aligns text within each span */
+}
+
+/* Adds padding to the table container for visual separation */
+.table-wrap {
+    padding: 0 0.75rem 1.5rem 0.75rem;
+}
+
+/* General table styling: removes border gaps, full width, and spaced for readability */
+table {
+    border-collapse: collapse; /* Removes gaps between table cells */
+    border: 0;                 /* Removes default border */
+    width: 100%;               /* Sets table to full container width */
+    position: relative;        /* Ensures absolute positioned elements respect table bounds */
+    margin-top: 3rem;          /* Adds spacing above the table */
+}
+
+/* Positions table captions for accessibility, styled with color and size */
+table caption {
+    color: #356eaf;            /* Blue color for distinction */
+    font-size: 1.3em;          /* Larger font for emphasis */
+    font-weight: normal;       /* Normal weight to maintain readability */
+    position: absolute;        /* Positions caption independently from the table */
+    top: -2.25rem;             /* Positions caption above the table */
+    left: 0.5rem;              /* Slight left padding for alignment */
+}
+
+/* Sets consistent width for data cells */
+tbody td {
+    width: 100vw;              /* Full viewport width for responsiveness */
+    min-width: 4rem;           /* Minimum width to prevent shrinking */
+    max-width: 4rem;           /* Maximum width to keep layout balanced */
+}
+
+/* Sets width for table headers to balance with data cells */
+tbody th {
+    width: calc(100% - 12rem); /* Sets remaining width for headers */
+}
+
+/* Styles the total row with bold font and double underline */
+tr[class="total"] {
+    border-bottom: 4px double #0a0a23; /* Double line for emphasis */
+    font-weight: bold;         /* Bold font for hierarchy */
+}
+
+/* Aligns total headers to the left with additional padding */
+tr[class="total"] th {
+    text-align: left;          /* Left-aligns header */
+    padding: 0.5rem 0 0.25rem 0.5rem; /* Padding for spacing */
+}
+
+/* Right-aligns and pads cells in the total row */
+tr.total td {
+    text-align: right;         /* Right-aligns data */
+    padding: 0 0.25rem;        /* Adds padding for layout consistency */
+}
+
+/* Additional padding on third cell for visual alignment */
+tr.total td:nth-of-type(3) {
+    padding-right: 0.5rem;
+}
+
+/* Hover effect to highlight total row on hover */
+tr.total:hover {
+    background-color: #99c9ff; /* Light blue background on hover */
+}
+
+/* Italicizes current year’s data for emphasis */
+td.current {
+    font-style: italic;
+}
+
+/* Alternates background for data rows, enhancing readability */
+tr.data {
+    background-image: linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem);
+}
+
+/* Aligns text in data headers to the left with padding */
+tr.data th {
+    text-align: left;          /* Aligns text left */
+    padding-top: 0.3rem;       /* Adds top padding */
+    padding-left: 0.5rem;      /* Adds left padding */
+}
+
+/* Styles descriptions for assets and liabilities in italics */
+tr.data th .description {
+    display: block;            /* Sets as block element for line breaks */
+    font-weight: normal;       /* Normal weight for readability */
+    font-style: italic;        /* Italics for distinction */
+    padding: 1rem 0 0.75rem;   /* Padding for spacing */
+    margin-right: -13.5rem;    /* Negative margin to keep description aligned */
+}
+
+/* Aligns and pads data cells to the right */
+tr.data td {
+    vertical-align: top;       /* Aligns content at the top */
+    padding: 0.3rem 0.25rem 0; /* Adds padding for spacing */
+    text-align: right;         /* Right-aligns text */
+}
+
+/* Additional padding for last data cell for alignment */
+tr.data td:last-of-type {
+    padding-right: 0.5rem;
+}
