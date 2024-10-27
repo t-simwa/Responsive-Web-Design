@@ -1,0 +1,229 @@
+/* Apply consistent box-sizing model across all elements to include padding and border in width and height */
+* {
+    box-sizing: border-box; /* Ensures padding/border are within total width/height */
+}
+
+/* Set background color for the entire page */
+body {
+    background-color: #c9d2fc; /* Light blue color as background for the page */
+}
+
+/* Main styling for the cat's head */
+.cat-head {
+    position: absolute; /* Absolutely positions the head to allow centering */
+    right: 0; /* Sets head’s right edge to align with the viewport's right edge */
+    left: 0; /* Sets head’s left edge to align with the viewport's left edge */
+    top: 0; /* Sets head’s top edge to align with the viewport's top edge */
+    bottom: 0; /* Sets head’s bottom edge to align with the viewport's bottom edge */
+    margin: auto; /* Centers the head horizontally and vertically in the viewport */
+    background: linear-gradient(#5e5e5e 85%, #45454f 100%); /* Adds a gradient for visual depth on head */
+    width: 205px; /* Sets fixed width of the head */
+    height: 180px; /* Sets fixed height of the head */
+    border: 1px solid #000; /* Adds a black border outline around the head */
+    border-radius: 46%; /* Rounds head into an oval shape */
+}
+
+/* Left outer ear styling */
+.cat-left-ear {
+    position: absolute; /* Absolutely positions left ear within the head */
+    top: -26px; /* Moves ear slightly above the top edge of the head */
+    left: -31px; /* Positions ear slightly to the left side of the head */
+    z-index: 1; /* Places ear behind other elements with a higher z-index */
+    border-top-left-radius: 90px; /* Rounds top-left corner for ear’s shape */
+    border-top-right-radius: 10px; /* Slightly rounds top-right corner for ear shape */
+    transform: rotate(-45deg); /* Tilts the ear towards the head */
+    border-left: 35px solid transparent; /* Creates triangle shape with transparent left border */
+    border-right: 35px solid transparent; /* Creates triangle shape with transparent right border */
+    border-bottom: 70px solid #5e5e5e; /* Fills bottom border with color for ear */
+}
+
+/* Right outer ear styling */
+.cat-right-ear {
+    position: absolute; /* Absolutely positions right ear within the head */
+    top: -26px; /* Aligns with top position of left ear */
+    left: 163px; /* Positions ear to the right side of the head */
+    z-index: 1; /* Places ear behind other elements with a higher z-index */
+    transform: rotate(45deg); /* Tilts the ear towards the head */
+    border-top-left-radius: 90px; /* Rounds top-left corner for ear’s shape */
+    border-top-right-radius: 10px; /* Slightly rounds top-right corner for ear shape */
+    border-left: 35px solid transparent; /* Creates triangle shape with transparent left border */
+    border-right: 35px solid transparent; /* Creates triangle shape with transparent right border */
+    border-bottom: 70px solid #5e5e5e; /* Fills bottom border with color for ear */
+}
+
+/* Left inner ear styling */
+.cat-left-inner-ear {
+    position: absolute; /* Positions inner ear relative to outer ear */
+    top: 22px; /* Positions inner ear within outer ear */
+    left: -20px; /* Moves inner ear within outer ear for alignment */
+    border-top-left-radius: 90px; /* Rounds inner ear’s top-left corner */
+    border-top-right-radius: 10px; /* Slightly rounds top-right corner */
+    border-bottom-right-radius: 40%; /* Adds rounding to bottom-right for smoothness */
+    border-bottom-left-radius: 40%; /* Adds rounding to bottom-left for smoothness */
+    border-left: 20px solid transparent; /* Creates triangle shape with transparent left border */
+    border-right: 20px solid transparent; /* Creates triangle shape with transparent right border */
+    border-bottom: 40px solid #3b3b4f; /* Fills bottom border with a darker color */
+}
+
+/* Right inner ear styling */
+.cat-right-inner-ear {
+    position: absolute; /* Positions inner ear relative to outer ear */
+    top: 22px; /* Positions inner ear within outer ear */
+    left: -20px; /* Moves inner ear within outer ear for alignment */
+    border-top-left-radius: 90px; /* Rounds inner ear’s top-left corner */
+    border-top-right-radius: 10px; /* Slightly rounds top-right corner */
+    border-bottom-right-radius: 40%; /* Adds rounding to bottom-right for smoothness */
+    border-bottom-left-radius: 40%; /* Adds rounding to bottom-left for smoothness */
+    border-left: 20px solid transparent; /* Creates triangle shape with transparent left border */
+    border-right: 20px solid transparent; /* Creates triangle shape with transparent right border */
+    border-bottom: 40px solid #3b3b4f; /* Fills bottom border with a darker color */
+}
+
+/* Style for the left outer eye */
+.cat-left-eye {
+    position: absolute; /* Positions left eye relative to the head */
+    top: 54px; /* Positions eye vertically on head */
+    left: 39px; /* Positions eye horizontally on head */
+    border-radius: 60%; /* Rounds eye into an oval shape */
+    transform: rotate(25deg); /* Slightly tilts the eye for expression */
+    width: 30px; /* Sets the width of the eye */
+    height: 40px; /* Sets the height of the eye */
+    background-color: #000; /* Fills eye with black color */
+}
+
+/* Style for the right outer eye */
+.cat-right-eye {
+    position: absolute; /* Positions right eye relative to the head */
+    top: 54px; /* Positions eye vertically on head */
+    left: 134px; /* Positions eye horizontally on head */
+    border-radius: 60%; /* Rounds eye into an oval shape */
+    transform: rotate(-25deg); /* Slightly tilts the eye in the opposite direction */
+    width: 30px; /* Sets the width of the eye */
+    height: 40px; /* Sets the height of the eye */
+    background-color: #000; /* Fills eye with black color */
+}
+
+/* Left inner eye highlight styling */
+.cat-left-inner-eye {
+    position: absolute; /* Positions highlight relative to the outer eye */
+    top: 8px; /* Positions highlight within the outer eye */
+    left: 2px; /* Aligns highlight within the eye */
+    width: 10px; /* Sets the width of the highlight */
+    height: 20px; /* Sets the height of the highlight */
+    transform: rotate(10deg); /* Adds a slight tilt for reflection effect */
+    background-color: #fff; /* Colors highlight white for a shiny effect */
+    border-radius: 60%; /* Rounds highlight for a natural look */
+}
+
+/* Right inner eye highlight styling */
+.cat-right-inner-eye {
+    position: absolute; /* Positions highlight relative to the outer eye */
+    top: 8px; /* Positions highlight within the outer eye */
+    left: 18px; /* Aligns highlight within the eye */
+    transform: rotate(-5deg); /* Adds a slight tilt for reflection effect */
+    width: 10px; /* Sets the width of the highlight */
+    height: 20px; /* Sets the height of the highlight */
+    background-color: #fff; /* Colors highlight white for a shiny effect */
+    border-radius: 60%; /* Rounds highlight for a natural look */
+}
+
+/* Styling for the cat's nose */
+.cat-nose {
+    position: absolute; /* Positions the nose within the head */
+    top: 108px; /* Vertically aligns nose on the face */
+    left: 85px; /* Horizontally aligns nose on the face */
+    border-top-left-radius: 50%; /* Rounds the top-left corner of the nose */
+    border-bottom-right-radius: 50%; /* Rounds the bottom-right corner */
+    border-bottom-left-radius: 50%; /* Rounds the bottom-left corner */
+    transform: rotate(180deg); /* Rotates nose to point downwards */
+    border-left: 15px solid transparent; /* Creates a triangle shape with left border transparent */
+    border-right: 15px solid transparent; /* Creates a triangle shape with right border transparent */
+    border-bottom: 20px solid #442c2c; /* Fills bottom part of the triangle for nose color */
+}
+
+/* Styling for the cat's mouth lines */
+.cat-mouth div {
+    width: 30px; /* Sets width of each mouth line */
+    height: 50px; /* Sets height of each mouth line */
+    border: 2px solid #000; /* Adds a black border to mouth lines */
+    border-radius: 190%/190px 150px 0 0; /* Rounds the mouth lines for an arc shape */
+    border-color: black transparent transparent transparent; /* Only the top part has color */
+}
+
+/* Left part of the mouth line */
+.cat-mouth-line-left {
+    position: absolute; /* Positions line relative to the head */
+    top: 88px; /* Vertical position of left mouth line */
+    left: 74px; /* Horizontal position of left mouth line */
+    transform: rotate(170deg); /* Rotates line to angle towards the nose */
+}
+
+/* Right part of the mouth line */
+.cat-mouth-line-right {
+    position: absolute; /* Positions line relative to the head */
+    top: 88px; /* Vertical position of right mouth line */
+    left: 91px; /* Horizontal position of right mouth line */
+    transform: rotate(165deg); /* Rotates line to angle towards the nose */
+}
+
+/* Left whiskers container styling */
+.cat-whiskers-left div {
+    width: 40px; /* Sets width for each whisker */
+    height: 1px; /* Sets height for each whisker */
+    background-color: #000; /* Colors whiskers black */
+}
+
+/* Right whiskers container styling */
+.cat-whiskers-right div {
+    width: 40px; /* Sets width for each whisker */
+    height: 1px; /* Sets height for each whisker */
+    background-color: #000; /* Colors whiskers black */
+}
+
+/* Top whisker on the left side */
+.cat-whisker-left-top {
+    position: absolute; /* Positions whisker relative to head */
+    top: 120px; /* Positions top left whisker vertically */
+    left: 52px; /* Positions top left whisker horizontally */
+    transform: rotate(10deg); /* Tilts whisker slightly upwards */
+}
+
+/* Middle whisker on the left side */
+.cat-whisker-left-middle {
+    position: absolute; /* Positions whisker relative to head */
+    top: 127px; /* Positions middle left whisker vertically */
+    left: 52px; /* Positions middle left whisker horizontally */
+    transform: rotate(3deg); /* Tilts whisker slightly */
+}
+
+/* Bottom whisker on the left side */
+.cat-whisker-left-bottom {
+    position: absolute; /* Positions whisker relative to head */
+    top: 134px; /* Positions bottom left whisker vertically */
+    left: 52px; /* Positions bottom left whisker horizontally */
+    transform: rotate(-3deg); /* Tilts whisker slightly downwards */
+}
+
+/* Top whisker on the right side */
+.cat-whisker-right-top {
+    position: absolute; /* Positions whisker relative to head */
+    top: 120px; /* Positions top right whisker vertically */
+    left: 109px; /* Positions top right whisker horizontally */
+    transform: rotate(-10deg); /* Tilts whisker slightly upwards */
+}
+
+/* Middle whisker on the right side */
+.cat-whisker-right-middle {
+    position: absolute; /* Positions whisker relative to head */
+    top: 127px; /* Positions middle right whisker vertically */
+    left: 109px; /* Positions middle right whisker horizontally */
+    transform: rotate(-3deg); /* Tilts whisker slightly */
+}
+
+/* Bottom whisker on the right side */
+.cat-whisker-right-bottom {
+    position: absolute; /* Positions whisker relative to head */
+    top: 134px; /* Positions bottom right whisker vertically */
+    left: 109px; /* Positions bottom right whisker horizontally */
+    transform: rotate(3deg); /* Tilts whisker slightly downwards */
+}
