@@ -1,0 +1,89 @@
+/* Set the box-sizing property to include padding and border in element's total width and height */
+html {
+    box-sizing: border-box;
+}
+
+/* Apply the inherited box-sizing rule to all elements and pseudo-elements */
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Style the piano container */
+#piano {
+    background-color: #00471b; /* Set dark green background color for the piano */
+    width: 992px; /* Define a specific width for the piano */
+    height: 290px; /* Set a fixed height for the piano */
+    margin: 80px auto; /* Center the piano with top margin */
+    padding: 90px 20px 0 20px; /* Apply padding on top and sides for inner spacing */
+    position: relative; /* Set positioning for potential child elements */
+    border-radius: 10px; /* Slightly round the corners */
+}
+
+/* Style the keys container */
+.keys {
+    background-color: #040404; /* Set dark background color to create contrast */
+    width: 949px; /* Define width to hold the keys */
+    height: 180px; /* Set height for the keys container */
+    padding-left: 2px; /* Add slight left padding */
+    overflow: hidden; /* Hide any overflow outside the container */
+}
+
+/* Style each individual white key */
+.key {
+    background-color: #ffffff; /* Set white background for piano keys */
+    position: relative; /* Position for child elements if needed */
+    width: 41px; /* Define the width of each key */
+    height: 175px; /* Set the height of each key */
+    margin: 2px; /* Add space between keys */
+    float: left; /* Align keys horizontally in a row */
+    border-radius: 0 0 3px 3px; /* Round the bottom corners slightly */
+}
+
+/* Style for each black key */
+.key.black--key::after {
+    background-color: #1d1e22; /* Set dark color for black keys */
+    content: ""; /* Use pseudo-element to represent the key */
+    position: absolute; /* Absolute positioning within the parent key */
+    left: -18px; /* Offset the black key to the left */
+    width: 32px; /* Define width of black keys */
+    height: 100px; /* Set height for black keys */
+    border-radius: 0 0 3px 3px; /* Round the bottom corners slightly */
+}
+
+/* Style for logo inside the piano */
+.logo {
+    width: 200px; /* Set a specific width for the logo */
+    position: absolute; /* Position the logo absolutely within piano */
+    top: 23px; /* Position logo vertically from the top */
+}
+
+/* Media query for screens 768px wide and smaller */
+@media (max-width: 768px) {
+    /* Adjust width of piano for smaller screens */
+    #piano {
+      width: 358px;
+    }
+  
+    /* Adjust width of keys container for smaller screens */
+    .keys {
+      width: 318px;
+    }
+  
+    /* Adjust logo width for smaller screens */
+    .logo {
+      width: 150px;
+    }
+}
+
+/* Media query for screens between 769px and 1199px wide */
+@media (max-width: 1199px) and (min-width: 769px) {
+    /* Adjust width of piano for medium screens */
+    #piano {
+      width: 675px;
+    }
+
+    /* Adjust width of keys container for medium screens */
+    .keys {
+      width: 633px;
+    }
+}
