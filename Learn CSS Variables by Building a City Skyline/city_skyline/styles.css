@@ -1,0 +1,335 @@
+:root {
+    /* Define color variables for building structures and windows */
+    --building-color1: #aa80ff; /* Primary color for building 1 */
+    --building-color2: #66cc99; /* Primary color for building 2 */
+    --building-color3: #cc6699; /* Primary color for building 3 */
+    --building-color4: #538cc6; /* Primary color for building 4 */
+    --window-color1: #bb99ff; /* Window color for building 1 */
+    --window-color2: #8cd9b3; /* Window color for building 2 */
+    --window-color3: #d98cb3; /* Window color for building 3 */
+    --window-color4: #8cb3d9; /* Window color for building 4 */
+  }
+  
+  * {
+    /* Apply box-sizing to all elements */
+    box-sizing: border-box; /* Ensures padding and borders are included in total width and height */
+  }
+  
+  body {
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default body margin */
+    overflow: hidden; /* Hide overflow to prevent scrolling */
+  }
+  
+  .background-buildings, .foreground-buildings {
+    width: 100%; /* Full width of viewport */
+    height: 100%; /* Full height of viewport */
+    display: flex; /* Flex container for buildings */
+    align-items: flex-end; /* Align items to the bottom */
+    justify-content: space-evenly; /* Evenly distribute space between buildings */
+    position: absolute; /* Position relative to nearest ancestor */
+    top: 0; /* Position at the top of the viewport */
+  }
+  
+  .building-wrap {
+    display: flex; /* Flex container for stacking building sections */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align elements horizontally */
+  }
+  
+  .window-wrap {
+    display: flex; /* Flex container for arranging windows */
+    align-items: center; /* Center-align windows vertically */
+    justify-content: space-evenly; /* Evenly space windows horizontally */
+  }
+  
+  .sky {
+    /* Set background gradient for the sky */
+    background: radial-gradient(
+      closest-corner circle at 15% 15%, /* Position the gradient's focal point */
+      #ffcf33, /* Center color of the gradient */
+      #ffcf33 20%, /* Define spread of the center color */
+      #ffff66 21%, /* Transition to a lighter yellow */
+      #bbeeff 100% /* End with a soft blue */
+    );
+  }
+  
+  /* BACKGROUND BUILDINGS - "bb" stands for "background building" */
+  
+  /* Background Building 1 */
+  .bb1 {
+    width: 10%; /* Building width as 10% of viewport */
+    height: 70%; /* Building height as 70% of viewport */
+  }
+  
+  .bb1a {
+    width: 70%; /* Width of the first section of building 1 */
+  }
+  
+  .bb1b {
+    width: 80%; /* Width of the second section of building 1 */
+  }
+  
+  .bb1c {
+    width: 90%; /* Width of the third section of building 1 */
+  }
+  
+  .bb1d {
+    width: 100%; /* Full width of the fourth section */
+    height: 70%; /* Height of the fourth section */
+    background: linear-gradient(
+      var(--building-color1) 50%, /* Top half color of the building */
+      var(--window-color1) /* Bottom half color for windows */
+    );
+  }
+  
+  .bb1-window {
+    height: 10%; /* Window height as 10% of each section */
+    background: linear-gradient(
+      var(--building-color1), /* Main building color */
+      var(--window-color1) /* Window color */
+    );
+  }
+  
+  /* Background Building 2 */
+  .bb2 {
+    width: 10%; /* Building width as 10% of viewport */
+    height: 50%; /* Building height as 50% of viewport */
+  }
+  
+  .bb2a {
+    border-bottom: 5vh solid var(--building-color2); /* Height and color of triangular roof */
+    border-left: 5vw solid transparent; /* Left triangle side, transparent */
+    border-right: 5vw solid transparent; /* Right triangle side, transparent */
+  }
+  
+  .bb2b {
+    width: 100%; /* Full width of the base section */
+    height: 100%; /* Full height of the base section */
+    background: repeating-linear-gradient(
+      var(--building-color2), /* Main color of the building */
+      var(--building-color2) 6%, /* Color height */
+      var(--window-color2) 6%, /* Transition height to window color */
+      var(--window-color2) 9% /* Window height */
+    );
+  }
+  
+  /* Background Building 3 */
+  .bb3 {
+    width: 10%; /* Building width as 10% of viewport */
+    height: 55%; /* Building height as 55% of viewport */
+    background: repeating-linear-gradient(
+      90deg, /* Gradient direction */
+      var(--building-color3), /* Main color of the building */
+      var(--building-color3), /* Start color of gradient */
+      var(--window-color3) 15% /* Window color stripe */
+    );
+  }
+  
+  /* Background Building 4 */
+  .bb4 {
+    width: 11%; /* Building width as 11% of viewport */
+    height: 58%; /* Building height as 58% of viewport */
+  }
+  
+  .bb4a {
+    width: 3%; /* Width of first section */
+    height: 10%; /* Height of first section */
+    background-color: var(--building-color4); /* Color of the section */
+  }
+  
+  .bb4b {
+    width: 80%; /* Width of second section */
+    height: 5%; /* Height of second section */
+    background-color: var(--building-color4); /* Color of the section */
+  }
+  
+  .bb4c {
+    width: 100%; /* Full width of third section */
+    height: 85%; /* Height of third section */
+    background-color: var(--building-color4); /* Color of the section */
+  }
+  
+  .bb4-window {
+    width: 18%; /* Width of windows in building 4 */
+    height: 90%; /* Height of windows in building 4 */
+    background-color: var(--window-color4); /* Window color */
+  }
+  
+  /* FOREGROUND BUILDINGS - "fb" stands for "foreground building" */
+  
+  /* Foreground Building 1 */
+  .fb1 {
+    width: 10%; /* Building width as 10% of viewport */
+    height: 60%; /* Building height as 60% of viewport */
+  }
+  
+  .fb1a {
+    border-bottom: 7vh solid var(--building-color4); /* Height and color of triangular roof */
+    border-left: 2vw solid transparent; /* Left triangle side, transparent */
+    border-right: 2vw solid transparent; /* Right triangle side, transparent */
+  }
+  
+  .fb1b {
+    width: 60%; /* Width of the top section */
+    height: 10%; /* Height of the top section */
+    background-color: var(--building-color4); /* Color of the section */
+  }
+  
+  .fb1c {
+    width: 100%; /* Full width of bottom section */
+    height: 80%; /* Height of bottom section */
+    background: repeating-linear-gradient(
+      90deg,
+      var(--building-color4),
+      var(--building-color4) 10%, /* Repeating pattern in section */
+      transparent 10%,
+      transparent 15%
+    ),
+    repeating-linear-gradient(
+      var(--building-color4),
+      var(--building-color4) 10%,
+      var(--window-color4) 10%, /* Window color stripe */
+      var(--window-color4) 90%
+    );
+  }
+  
+  /* Foreground Building 2 */
+  .fb2 {
+    width: 10%; /* Building width as 10% of viewport */
+    height: 40%; /* Building height as 40% of viewport */
+  }
+  
+  .fb2a {
+    width: 100%; /* Full width of top section */
+    border-bottom: 10vh solid var(--building-color3); /* Height and color of triangle */
+    border-left: 1vw solid transparent; /* Left triangle side, transparent */
+    border-right: 1vw solid transparent; /* Right triangle side, transparent */
+  }
+  
+  .fb2b {
+    width: 100%; /* Full width of bottom section */
+    height: 75%; /* Height of bottom section */
+    background-color: var(--building-color3); /* Section color */
+  }
+  
+  .fb2-window {
+    width: 22%; /* Width of windows in building 2 */
+    height: 100%; /* Full height of windows */
+    background-color: var(--window-color3); /* Window color */
+  }
+  
+  .fb3 {
+    width: 10%; /* Building width as 10% of viewport */
+    height: 35%; /* Building height as 35% of viewport */
+  }
+  
+  .fb3a {
+    width: 80%; /* Width of top section */
+    height: 15%; /* Height of top section */
+    background-color: var(--building-color1); /* Color of the section */
+  }
+  
+  .fb3b {
+    width: 100%; /* Full width of bottom section */
+    height: 35%; /* Height of bottom section */
+    background-color: var(--building-color1); /* Color of the section */
+  }
+  
+  .fb3-window {
+    width: 25%; /* Width of each window in building 3 */
+    height: 80%; /* Height of each window */
+    background-color: var(--window-color1); /* Window color */
+  }
+  
+  .fb4 {
+    width: 8%; /* Building width as 8% of viewport */
+    height: 45%; /* Building height as 45% of viewport */
+    position: relative;
+    left: 10%; /* Offset building position to the left */
+  }
+  
+  .fb4a {
+    border-top: 5vh solid transparent; /* Transparent triangle top */
+    border-left: 8vw solid var(--building-color1); /* Solid color for main part */
+  }
+  
+  .fb4b {
+    width: 100%; /* Full width of bottom section */
+    height: 89%; /* Height of bottom section */
+    background-color: var(--building-color1); /* Section color */
+    display: flex; /* Flex layout for windows */
+    flex-wrap: wrap; /* Wrap windows in rows */
+  }
+  
+  .fb4-window {
+    width: 30%; /* Width of each circular window */
+    height: 10%; /* Height of each circular window */
+    border-radius: 50%; /* Make window circular */
+    background-color: var(--window-color1); /* Window color */
+    margin: 10%; /* Margin between windows */
+  }
+  
+  .fb5 {
+    width: 10%; /* Building width as 10% of viewport */
+    height: 33%; /* Building height as 33% of viewport */
+    position: relative;
+    right: 10%; /* Offset building to the right */
+    background: repeating-linear-gradient(
+      var(--building-color2),
+      var(--building-color2) 5%, /* Height of color stripe */
+      transparent 5%, /* Transition height to transparent */
+      transparent 10%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--building-color2),
+      var(--building-color2) 12%, /* Repeating pattern direction */
+      var(--window-color2) 12%, /* Window color stripe */
+      var(--window-color2) 44%
+    );
+  }
+  
+  .fb6 {
+    width: 9%; /* Building width as 9% of viewport */
+    height: 38%; /* Building height as 38% of viewport */
+    background: repeating-linear-gradient(
+      90deg,
+      var(--building-color3), /* Main color of the building */
+      var(--building-color3) 10%, /* Start of color stripe */
+      transparent 10%, /* Transition height to transparent */
+      transparent 30%
+    ),
+    repeating-linear-gradient(
+      var(--building-color3), /* Main color of the building */
+      var(--building-color3) 10%, /* Height of color stripe */
+      var(--window-color3) 10%, /* Window color stripe */
+      var(--window-color3) 30%
+    );
+  }
+  
+  /* Responsive design for screen widths below 1000px */
+  @media (max-width: 1000px) {
+    :root {
+      /* Darken colors for small screen sizes */
+      --building-color1: #000;
+      --building-color2: #000;
+      --building-color3: #000;
+      --building-color4: #000;
+      --window-color1: #777;
+      --window-color2: #777;
+      --window-color3: #777;
+      --window-color4: #777;
+    }
+    .sky {
+      /* Set background gradient for smaller screen sky */
+      background: radial-gradient(
+        closest-corner circle at 15% 15%, /* Position focal point */
+        #ccc, /* Center color */
+        #ccc 20%, /* Spread of the center color */
+        #445 21%, /* Transition to a darker tone */
+        #223 100% /* End with a deep blue */
+      );
+    }
+  }
+  
