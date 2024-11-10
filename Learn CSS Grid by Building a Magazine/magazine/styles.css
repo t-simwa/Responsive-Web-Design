@@ -1,0 +1,228 @@
+/* Reset padding, margin, and set box-sizing for all elements to border-box */
+*,
+::before,
+::after {
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  box-sizing: border-box; /* Include padding and border in element's total width/height */
+}
+
+/* Set base font size to 62.5% (10px) for easier rem calculations */
+html {
+  font-size: 62.5%; /* 62.5% of the default 16px font size (10px) */
+}
+
+/* Apply font, text color, and background color to the body */
+body {
+  font-family: 'Baskervville', serif; /* Use Baskervville font with serif fallback */
+  color: linen; /* Set text color to linen */
+  background-color: rgb(20, 30, 40); /* Set a dark background color */
+}
+
+/* Set font family for h1 headers */
+h1 {
+  font-family: 'Anton', sans-serif; /* Use Anton font with sans-serif fallback */
+}
+
+/* Set font family for all other headers (h2 to h6) */
+h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif; /* Use Raleway font with sans-serif fallback */
+}
+
+/* Remove underline from links and set text color */
+a {
+  text-decoration: none; /* Remove underline */
+  color: linen; /* Set link color to linen */
+}
+
+/* Main content area layout grid with three columns */
+main {
+  display: grid; /* Use grid layout */
+  /* Define three columns:
+     - Left and right columns are flexible but at least 2rem wide
+     - Center column has a max width of 94rem */
+  grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 94rem) minmax(2rem, 1fr);
+  row-gap: 3rem; /* Set 3rem space between rows */
+}
+
+/* Make images responsive and cover the entire container */
+img {
+  width: 100%; /* Image takes up full width of container */
+  object-fit: cover; /* Scale image to cover container without stretching */
+}
+
+/* Style for horizontal rule element */
+hr {
+  margin: 1.5rem 0; /* Add vertical spacing above and below */
+  border: 1px solid rgba(120, 120, 120, 0.6); /* Semi-transparent grey border */
+}
+
+/* Layout grid for the heading section */
+.heading {
+  grid-column: 2 / 3; /* Position in the center column of the main grid */
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(2, 1fr); /* Split into two equal columns */
+  row-gap: 1.5rem; /* Space of 1.5rem between rows */
+}
+
+/* Style for main text content */
+.text {
+  grid-column: 2 / 3; /* Position in the center column of the main grid */
+  font-size: 1.8rem; /* Set font size to 1.8rem */
+  letter-spacing: 0.6px; /* Add slight letter spacing for readability */
+  column-width: 25rem; /* Set column width for text layout */
+  text-align: justify; /* Justify text alignment */
+}
+
+/* Hero section occupying the entire width of its grid */
+.hero {
+  grid-column: 1 / -1; /* Span across all columns in its grid */
+  position: relative; /* Set relative positioning for layered elements */
+}
+
+/* Main title styling in hero section */
+.hero-title {
+  text-align: center; /* Center-align title */
+  color: orangered; /* Set title color to orangered */
+  font-size: 8rem; /* Set font size to 8rem for large display */
+}
+
+/* Subtitle styling in hero section */
+.hero-subtitle {
+  font-size: 2.4rem; /* Set font size to 2.4rem */
+  color: orangered; /* Set subtitle color to orangered */
+  text-align: center; /* Center-align subtitle */
+}
+
+/* Style for author section */
+.author {
+  font-size: 2rem; /* Set font size to 2rem */
+  font-family: "Raleway", sans-serif; /* Use Raleway font with sans-serif fallback */
+}
+
+/* Hover effect for author name link */
+.author-name a:hover {
+  background-color: #306203; /* Change background color on hover */
+}
+
+/* Style for publication date text */
+.publish-date {
+  color: rgba(255, 255, 255, 0.5); /* Set text color to semi-transparent white */
+}
+
+/* Social media icon grid layout */
+.social-icons {
+  display: grid; /* Use grid layout */
+  font-size: 3rem; /* Set icon font size */
+  grid-template-columns: repeat(5, 1fr); /* Five equal columns */
+  grid-auto-flow: column; /* Arrange items in a single row */
+  grid-auto-columns: 1fr; /* Each column is equally wide */
+  align-items: center; /* Center-align icons vertically */
+}
+
+/* Style for the first letter in the first paragraph */
+.first-paragraph::first-letter {
+  font-size: 6rem; /* Large font size for the first letter */
+  color: orangered; /* Set first letter color to orangered */
+  float: left; /* Float to the left of the paragraph */
+  margin-right: 1rem; /* Space between first letter and rest of text */
+}
+
+/* Styling for quote text */
+.quote {
+  color: #00beef; /* Set text color to blue */
+  font-size: 2.4rem; /* Set font size to 2.4rem */
+  text-align: center; /* Center-align text */
+  font-family: "Raleway", sans-serif; /* Use Raleway font with sans-serif fallback */
+}
+
+/* Add quotation mark before quote text */
+.quote::before {
+  content: '" '; /* Display opening quotation mark */
+}
+
+/* Add quotation mark after quote text */
+.quote::after {
+  content: ' "'; /* Display closing quotation mark */
+}
+
+/* Layout grid for text with images */
+.text-with-images {
+  display: grid; /* Use grid layout */
+  grid-template-columns: 1fr 2fr; /* Two columns, second column is twice the width */
+  column-gap: 3rem; /* Space of 3rem between columns */
+  margin-bottom: 3rem; /* Space below the section */
+}
+
+/* Style for lists without bullet points */
+.lists {
+  list-style-type: none; /* Remove default list style */
+  margin-top: 2rem; /* Space above the list */
+}
+
+/* Styling for individual list items */
+.lists li {
+  margin-bottom: 1.5rem; /* Space below each list item */
+}
+
+/* Style for list title and subtitle text */
+.list-title, .list-subtitle {
+  color: #00beef; /* Set text color to blue */
+}
+
+/* Layout for image wrapper section */
+.image-wrapper {
+  display: grid; /* Use grid layout */
+  grid-template-columns: 2fr 1fr; /* Two columns, first column is twice as wide */
+  grid-template-rows: repeat(3, min-content); /* Three rows with minimal height */
+  gap: 2rem; /* Space between grid items */
+  place-items: center; /* Center-align items in both directions */
+}
+
+/* Image elements that span the entire width of their grid */
+.image-1, .image-3 {
+  grid-column: 1 / -1; /* Span across all columns */
+}
+
+/* Responsive layout for image wrapper on small screens */
+@media only screen and (max-width: 720px) {
+  .image-wrapper {
+    grid-template-columns: 1fr; /* Single-column layout for smaller screens */
+  }
+}
+
+/* Responsive layout for text with images on smaller screens */
+@media only screen and (max-width: 600px) {
+  .text-with-images {
+    grid-template-columns: 1fr; /* Single-column layout for smaller screens */
+  }
+}
+
+/* Adjust hero title and text size on small screens */
+@media only screen and (max-width: 550px) {
+  .hero-title {
+    font-size: 6rem; /* Smaller font size for hero title */
+  }
+  
+  .hero-subtitle,
+  .author,
+  .quote,
+  .list-title {
+    font-size: 1.8rem; /* Smaller font size for text elements */
+  }
+  
+  .social-icons {
+    font-size: 2rem; /* Reduce icon size */
+  }
+
+  .text {
+    font-size: 1.6rem; /* Reduce text size */
+  } 
+}
+
+/* Further reduce hero title size on very small screens */
+@media only screen and (max-width: 420px) {
+  .hero-title {
+    font-size: 4.5rem; /* Smallest font size for hero title */
+  }
+}
