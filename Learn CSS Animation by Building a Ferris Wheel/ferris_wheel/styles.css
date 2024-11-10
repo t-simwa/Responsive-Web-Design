@@ -1,0 +1,145 @@
+/* Styles for the Ferris wheel container */
+.wheel {
+    /* Black border around the wheel */
+    border: 2px solid black;
+    /* Make the wheel circular */
+    border-radius: 50%;
+    /* Positioning the wheel slightly from the left */
+    margin-left: 50px;
+    /* Allows for precise positioning */
+    position: absolute;
+    /* Setting the size of the wheel based on viewport width */
+    height: 55vw;
+    width: 55vw;
+    /* Maximum size constraints */
+    max-width: 500px;
+    max-height: 500px;
+    /* Name of the animation for rotation */
+    animation-name: wheel;
+    /* Duration of one animation cycle */
+    animation-duration: 10s;
+    /* Infinite loop for the animation */
+    animation-iteration-count: infinite;
+    /* Smooth, constant speed rotation */
+    animation-timing-function: linear;
+}
+  
+/* Styles for each spoke (line) in the Ferris wheel */
+.line {
+    /* Black color for the spokes */
+    background-color: black;
+    /* Half the width of the wheel to reach the center */
+    width: 50%;
+    /* Minimal height for the line thickness */
+    height: 2px;
+    /* Allows for precise positioning within wheel */
+    position: absolute;
+    /* Center-align the line vertically */
+    top: 50%;
+    /* Center-align the line horizontally */
+    left: 50%;
+    /* Set the pivot point for rotation at the start */
+    transform-origin: 0% 0%;
+}
+
+/* Rotating each line by increments to create a circular spoke pattern */
+.line:nth-of-type(2) {
+    transform: rotate(60deg);
+}
+.line:nth-of-type(3) {
+    transform: rotate(120deg);
+}
+.line:nth-of-type(4) {
+    transform: rotate(180deg);
+}
+.line:nth-of-type(5) {
+    transform: rotate(240deg);
+}
+.line:nth-of-type(6) {
+    transform: rotate(300deg);
+}
+  
+/* Styles for each cabin on the Ferris wheel */
+.cabin {
+    /* Red color for the cabins */
+    background-color: red;
+    /* Cabin size as a percentage of the wheel */
+    width: 20%;
+    height: 20%;
+    /* Position cabins with precise alignment */
+    position: absolute;
+    /* Cabin border for better visibility */
+    border: 2px solid;
+    /* Set pivot point for cabin rotation */
+    transform-origin: 50% 0%;
+    /* Apply animation to the cabins */
+    animation: cabins 10s ease-in-out infinite;
+}
+
+/* Positioning each cabin around the wheel */
+.cabin:nth-of-type(1) {
+    /* Position for cabin 1 */
+    right: -8.5%;
+    top: 50%;
+}
+.cabin:nth-of-type(2) {
+    /* Position for cabin 2 */
+    right: 17%;
+    top: 93.5%;
+}
+.cabin:nth-of-type(3) {
+    /* Position for cabin 3 */
+    right: 67%;
+    top: 93.5%;
+}
+.cabin:nth-of-type(4) {
+    /* Position for cabin 4 */
+    left: -8.5%;
+    top: 50%;
+}
+.cabin:nth-of-type(5) {
+    /* Position for cabin 5 */
+    left: 17%;
+    top: 7%;
+}
+.cabin:nth-of-type(6) {
+    /* Position for cabin 6 */
+    right: 17%;
+    top: 7%;
+}
+
+/* Keyframes for rotating the Ferris wheel */
+@keyframes wheel {
+    0% {
+       /* Initial position */
+       transform: rotate(0deg);
+    }
+    100% {
+       /* Full rotation back to start */
+       transform: rotate(360deg);
+    }
+}
+
+/* Keyframes for animating the cabins' rotation and color */
+@keyframes cabins {
+    0% {
+      /* Initial rotation position */
+      transform: rotate(0deg);
+    }
+    25% {
+      /* Change cabin color to yellow */
+      background-color: yellow;
+    }
+    50% {
+      /* Change cabin color to purple */
+      background-color: purple;
+    }
+    75% {
+      /* Change cabin color back to yellow */
+      background-color: yellow;
+    }
+    100% {
+      /* Full reverse rotation */
+      transform: rotate(-360deg);
+    }
+}
