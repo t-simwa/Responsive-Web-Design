@@ -1,0 +1,424 @@
+/* Define root variables for easy theme customization */
+:root {
+    /* Variable for penguin's face color */
+    --penguin-face: white;
+    /* Variable for penguin's beak and foot color */
+    --penguin-picorna: orange;
+    /* Variable for penguin's primary skin color */
+    --penguin-skin: gray;
+  }
+  
+  /* Main page styling */
+  body {
+    /* Set a background gradient to represent the sky */
+    background: linear-gradient(45deg, rgb(118, 201, 255), rgb(247, 255, 222));
+    /* Remove default body margins for seamless layout */
+    margin: 0;
+    /* Remove default body padding */
+    padding: 0;
+    /* Ensure the body takes up full width */
+    width: 100%;
+    /* Set body height to fill the viewport */
+    height: 100vh;
+    /* Hide any content that overflows the viewport */
+    overflow: hidden;
+  }
+  
+  /* Styling for left mountain element */
+  .left-mountain {
+    /* Set mountain width */
+    width: 300px;
+    /* Set mountain height */
+    height: 300px;
+    /* Apply a gradient for mountain coloring */
+    background: linear-gradient(rgb(203, 241, 228), rgb(80, 183, 255));
+    /* Position absolutely for precise placement */
+    position: absolute;
+    /* Skew mountain for a slanted look */
+    transform: skew(0deg, 44deg);
+    /* Place it above other lower z-index elements */
+    z-index: 2;
+    /* Move down from top */
+    margin-top: 100px;
+  }
+  
+  /* Styling for back mountain element */
+  .back-mountain {
+    /* Set dimensions similar to left mountain */
+    width: 300px;
+    height: 300px;
+    /* Different color gradient for distinction */
+    background: linear-gradient(rgb(203, 241, 228), rgb(47, 170, 255));
+    /* Position absolutely for exact placement */
+    position: absolute;
+    /* Place behind left mountain using z-index */
+    z-index: 1;
+    /* Rotate for visual effect */
+    transform: rotate(45deg);
+    /* Adjust horizontal placement */
+    left: 110px;
+    /* Adjust vertical placement */
+    top: 225px;
+  }
+  
+  /* Sun element styling */
+  .sun {
+    /* Define sun's width and height for a circular shape */
+    width: 200px;
+    height: 200px;
+    /* Set background color to yellow for the sun */
+    background-color: yellow;
+    /* Position the sun absolutely */
+    position: absolute;
+    /* Make the sun circular using border-radius */
+    border-radius: 50%;
+    /* Position sun at the top right */
+    top: -75px;
+    right: -75px;
+  }
+  
+  /* Main penguin container styling */
+  .penguin {
+    /* Define penguin's width and height */
+    width: 300px;
+    height: 300px;
+    /* Center horizontally on the page */
+    margin: auto;
+    /* Move penguin down slightly */
+    margin-top: 75px;
+    /* Set z-index to layer it in front of mountains */
+    z-index: 4;
+    /* Position relatively for child element placement */
+    position: relative;
+    /* Smooth scaling transition for when penguin is clicked */
+    transition: transform 1s ease-in-out 0ms;
+  }
+  
+  /* Style all elements inside penguin container */
+  .penguin * {
+    /* Make each child element absolutely positioned */
+    position: absolute;
+  }
+  
+  /* Active state for penguin, when clicked */
+  .penguin:active {
+    /* Scale up on click for interactivity */
+    transform: scale(1.5);
+    /* Change cursor to indicate click action disabled */
+    cursor: not-allowed;
+  }
+  
+  /* Styling for the penguin's head */
+  .penguin-head {
+    /* Head width to occupy half of penguin container */
+    width: 50%;
+    /* Head height set to a percentage of container height */
+    height: 45%;
+    /* Apply gradient for penguin's skin color */
+    background: linear-gradient(45deg, var(--penguin-skin), rgb(239, 240, 228));
+    /* Round off edges for head shape */
+    border-radius: 70% 70% 65% 65%;
+    /* Position head near top of container */
+    top: 10%;
+    /* Center head horizontally */
+    left: 25%;
+    /* Layer above body and other elements */
+    z-index: 1;
+  }
+  
+  /* Define face sections inside penguin head */
+  .face {
+    /* Define face dimensions */
+    width: 60%;
+    height: 70%;
+    /* Set background color to face variable */
+    background-color: var(--penguin-face);
+    /* Rounded shape to fit head contour */
+    border-radius: 70% 70% 60% 60%;
+    /* Position near top of head */
+    top: 15%;
+  }
+  
+  /* Position left side of face */
+  .face.left {
+    left: 5%;
+  }
+  
+  /* Position right side of face */
+  .face.right {
+    right: 5%;
+  }
+  
+  /* Define chin area */
+  .chin {
+    /* Set chin width to almost full face width */
+    width: 90%;
+    /* Set chin height proportionally */
+    height: 70%;
+    /* Match face color for consistency */
+    background-color: var(--penguin-face);
+    /* Position chin slightly lower on face */
+    top: 25%;
+    /* Center chin horizontally */
+    left: 5%;
+    /* Round edges for a smooth look */
+    border-radius: 70% 70% 100% 100%;
+  }
+  
+  /* Define eyes for penguin face */
+  .eye {
+    /* Small eye width for cartoon style */
+    width: 15%;
+    /* Eye height proportionate to width */
+    height: 17%;
+    /* Set eye color to black */
+    background-color: black;
+    /* Position eyes centrally */
+    top: 45%;
+    /* Round shape */
+    border-radius: 50%;
+  }
+  
+  /* Position left eye */
+  .eye.left {
+    left: 25%;
+  }
+  
+  /* Position right eye */
+  .eye.right {
+    right: 25%;
+  }
+  
+  /* Define eye-lid shape */
+  .eye-lid {
+    /* Wider than the eye itself */
+    width: 150%;
+    /* Match eye height */
+    height: 100%;
+    /* Set color same as face for closed-eye effect */
+    background-color: var(--penguin-face);
+    /* Position over eye */
+    top: 25%;
+    /* Shift horizontally to cover eye */
+    left: -23%;
+    /* Rounded shape for lid */
+    border-radius: 50%;
+  }
+  
+  /* Blush marks for the penguin */
+  .blush {
+    /* Small circular blush width */
+    width: 15%;
+    /* Height for a slight blush */
+    height: 10%;
+    /* Set blush color to pink */
+    background-color: pink;
+    /* Position lower on face */
+    top: 65%;
+    /* Rounded for blush spots */
+    border-radius: 50%;
+  }
+  
+  /* Position left blush */
+  .blush.left {
+    left: 15%;
+  }
+  
+  /* Position right blush */
+  .blush.right {
+    right: 15%;
+  }
+  
+  /* Define beak sections */
+  .beak {
+    /* Set beak height */
+    height: 10%;
+    /* Set color for beak using variable */
+    background-color: var(--penguin-picorna);
+    /* Rounded beak shape */
+    border-radius: 50%;
+  }
+  
+  /* Position top beak */
+  .beak.top {
+    /* Slightly larger width */
+    width: 20%;
+    /* Position centrally */
+    top: 60%;
+    left: 40%;
+  }
+  
+  /* Position bottom beak */
+  .beak.bottom {
+    /* Smaller width */
+    width: 16%;
+    /* Positioned slightly below top beak */
+    top: 65%;
+    left: 42%;
+  }
+  
+  /* Style for shirt text */
+  .shirt {
+    /* Define font and size */
+    font: bold 25px Helvetica, sans-serif;
+    /* Position shirt text on penguin */
+    top: 165px;
+    left: 127.5px;
+    /* Layer above other body parts */
+    z-index: 1;
+    /* Set shirt text color */
+    color: #6a6969;
+  }
+  
+  /* Emoji styling within shirt text */
+  .shirt div {
+    /* Default font weight */
+    font-weight: initial;
+    /* Position emoji on shirt */
+    top: 22.5px;
+    /* Adjust emoji's horizontal position */
+    left: 12px;
+  }
+  
+  /* Define penguin's body shape */
+  .penguin-body {
+    /* Width as a percentage of container */
+    width: 53%;
+    /* Height as a percentage of container */
+    height: 45%;
+    /* Apply a gradient for layered effect */
+    background: linear-gradient(45deg, rgb(134, 133, 133) 0%, rgb(234, 231, 231) 25%, white 67%);
+    /* Rounded body shape */
+    border-radius: 80% 80% 100% 100%;
+    /* Position lower within container */
+    top: 40%;
+    left: 23.5%;
+  }
+  
+  /* Add a pseudo-element for the belly of the penguin */
+.penguin-body::before {
+    /* Empty content to use as visual element */
+    content: "";
+    /* Position relative to the body */
+    position: absolute;
+    /* Set belly width as half of body width */
+    width: 50%;
+    /* Set belly height */
+    height: 45%;
+    /* Use skin color for belly */
+    background-color: var(--penguin-skin);
+    /* Position belly near the top */
+    top: 10%;
+    /* Center belly horizontally */
+    left: 25%;
+    /* Rounded bottom for realistic shape */
+    border-radius: 0% 0% 100% 100%;
+    /* Set semi-transparency for subtle effect */
+    opacity: 70%;
+  }
+  
+  /* Define penguin's arm shapes */
+  .arm {
+    /* Set arm width */
+    width: 30%;
+    /* Set arm height */
+    height: 60%;
+    /* Apply gradient for shading */
+    background: linear-gradient(90deg, var(--penguin-skin), rgb(209, 210, 199));
+    /* Rounded edges with extended bottom for wing-like appearance */
+    border-radius: 30% 30% 30% 120%;
+    /* Position below head layer */
+    z-index: -1;
+  }
+  
+  /* Position left arm */
+  .arm.left {
+    /* Set vertical position */
+    top: 35%;
+    /* Position slightly to the left */
+    left: 5%;
+    /* Set rotation and origin for waving effect */
+    transform-origin: top left;
+    /* Rotate to align with body shape */
+    transform: rotate(130deg) scaleX(-1);
+    /* Animation for waving */
+    animation: 3s linear infinite wave;
+  }
+  
+  /* Position right arm */
+  .arm.right {
+    /* Align right arm with head */
+    top: 0%;
+    /* Slightly outside body on the right */
+    right: -5%;
+    /* Rotate to mirror left arm */
+    transform: rotate(-45deg);
+  }
+  
+  /* Define keyframes for waving animation on left arm */
+  @keyframes wave {
+    /* Different angles to simulate wave */
+    10% {
+      transform: rotate(110deg) scaleX(-1);
+    }
+    20% {
+      transform: rotate(130deg) scaleX(-1);
+    }
+    30% {
+      transform: rotate(110deg) scaleX(-1);
+    }
+    40% {
+      transform: rotate(130deg) scaleX(-1);
+    }
+  }
+  
+  /* Define penguin's foot shape */
+  .foot {
+    /* Foot width */
+    width: 15%;
+    /* Foot height for proportion */
+    height: 30%;
+    /* Color the foot using beak color variable */
+    background-color: var(--penguin-picorna);
+    /* Position feet at the bottom */
+    top: 85%;
+    /* Rounded shape for cartoon style */
+    border-radius: 50%;
+    /* Place behind body in layering */
+    z-index: -1;
+  }
+  
+  /* Position left foot */
+  .foot.left {
+    /* Align foot slightly left */
+    left: 25%;
+    /* Rotate for natural stance */
+    transform: rotate(80deg);
+  }
+  
+  /* Position right foot */
+  .foot.right {
+    /* Align foot slightly right */
+    right: 25%;
+    /* Rotate to mirror left foot */
+    transform: rotate(-80deg);
+  }
+  
+  /* Ground element for penguin environment */
+  .ground {
+    /* Full viewport width for ground area */
+    width: 100vw;
+    /* Height for ground */
+    height: 400px;
+    /* Gradient for ground coloring */
+    background: linear-gradient(90deg, rgb(88, 175, 236), rgb(182, 255, 255));
+    /* Position ground layer behind penguin */
+    z-index: 3;
+    /* Absolute positioning to overlap body */
+    position: absolute;
+    /* Offset to align with bottom of screen */
+    margin-top: -58px;
+    /* Dynamically calculate ground height based on viewport */
+    height: calc(100vh - 300px);
+  }
+  
