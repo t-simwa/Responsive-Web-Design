@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Sets character encoding for the document -->
+    <meta charset="UTF-8">
+    <!-- Ensures responsiveness on various screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Links external stylesheet for page styling -->
+    <link rel="stylesheet" href="./styles.css">
+    
+    <!-- Preconnects to Google Fonts for efficient font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+    
+    <!-- Imports Google Fonts for custom typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <!-- Sets page title displayed on the browser tab -->
+    <title>Python Documentation</title>
+</head>
+
+<body>
+    <!-- Navigation bar with links to each section of the documentation -->
+    <nav id="navbar">
+        <header>Python Documentation</header>
+        <ul>
+            <!-- Links to specific sections on the page for easy navigation -->
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#What_you_should_already_know">What you should already know</a></li>
+            <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
+            <li><a class="nav-link" href="#Variables">Variables</a></li>
+            <li><a class="nav-link" href="#Declaring_variables">Declaring variables</a></li>
+            <li><a class="nav-link" href="#Reference">Reference</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Main content area for the documentation -->
+    <main id="main-doc">
+        <!-- Introduction section with general information about Python -->
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+                <p>
+                    Python is a high-level, interpreted, general-purpose programming language that emphasizes
+                    readability and simplicity. It was created by Guido van Rossum and released in 1991. Python allows
+                    developers to express their ideas in fewer lines of code compared to other programming languages. It
+                    is dynamically typed and garbage-collected, meaning that memory management is handled automatically,
+                    and you do not need to declare the data types of variables explicitly.
+                </p>
+                <p>
+                    Python supports multiple programming paradigms, including procedural, object-oriented, and
+                    functional programming. It also has a large standard library and supports a vast ecosystem of
+                    third-party libraries that make it suitable for many tasks, from web development and automation to
+                    data science and machine learning.
+                </p>
+            </article>
+        </section>
+        
+        <!-- Section listing recommended prior knowledge for reading this documentation -->
+        <section class="main-section" id="What_you_should_already_know">
+            <header>What you should already know</header>
+            <article>
+                <p>This documentation assumes you have the following background:</p>
+                <ul>
+                    <li>A general understanding of how computers and programming work: Familiarity with how a computer
+                        processes code, executes commands, and interacts with hardware and software.</li>
+                    <li>Basic knowledge of working with text files and operating systems: Understanding how to open,
+                        write, and read files, as well as basic system operations.</li>
+                    <li>Familiarity with basic programming concepts: Concepts such as loops, conditionals, and variables
+                        will be helpful. If you're new to programming, consider starting with an introductory Python
+                        tutorial or course.</li>
+                </ul>
+                <p>If you're new to programming, there are many introductory tutorials available for Python to help get
+                    you started.</p>
+            </article>
+        </section>
+        
+        <!-- Section introducing Python's "Hello, World!" example and code explanation -->
+        <section class="main-section" id="Hello_world">
+            <header>Hello world</header>
+            <article>
+                <p>To get started with Python, the first program you typically write is "Hello, World!" This is a basic
+                    program that simply outputs a message to the screen. Here’s how you do it in Python:</p>
+                <code>
+                    def greet_me(name):
+                        print("Hello, " + name)
+
+                    greet_me("World")
+                </code>
+                <p>In this code:</p>
+                <ul>
+                    <li><code>greet_me</code> is a function that takes a parameter <code>name</code>.</li>
+                    <li>The <code>print</code> function outputs the text <code>"Hello, World"</code> to the screen when
+                        you call <code>greet_me("World")</code>.</li>
+                </ul>
+            </article>
+        </section>
+        
+        <!-- Section explaining Python variable basics with code examples -->
+        <section class="main-section" id="Variables">
+            <header>Variables</header>
+            <article>
+                <p>A variable in Python is a symbolic name that is bound to a value. Variables do not need an explicit
+                    declaration of type. The type of the variable is determined when the program runs.</p>
+                <code>
+                    x = 42        
+                    name = "John"
+                </code>
+                <p>Variables in Python are assigned using the <code>=</code> operator. Python does not use type
+                    declarations like
+                    <code>int</code>, <code>float</code>, or <code>str</code>; instead, it infers the type based on the
+                    value assigned.
+                </p>
+            </article>
+        </section>
+        
+        <!-- Section on declaring variables in Python with examples -->
+        <section class="main-section" id="Declaring_variables">
+            <header>Declaring variables</header>
+            <article>
+                <p>In Python, variables are created by assigning values to them. Python does not require an explicit
+                    declaration statement or type information. This is because Python is dynamically typed.</p>
+                <code>
+                    x = 10 
+                    name = "Python"
+                </code>
+                <p>Once a variable is assigned a value, Python will automatically determine its type.</p>
+                <code>
+                    x = 10  
+                    y = 3.14
+                    message = "Hello"
+                </code>
+            </article>
+        </section>
+        
+        <!-- Reference section with external link to the official Python documentation -->
+        <section class="main-section" id="Reference">
+            <header>Reference</header>
+            <article>
+                <p>The content here is based on the official Python documentation, available at <a
+                        href="https://docs.python.org/3/" target="_blank">Python Documentation</a>.</p>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

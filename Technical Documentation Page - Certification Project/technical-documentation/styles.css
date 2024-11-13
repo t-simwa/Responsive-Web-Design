@@ -1,0 +1,147 @@
+/* Sets minimum width for the page and basic styling for text and background */
+html,
+body {
+  min-width: 290px; /* Ensures content doesn't get too narrow on small screens */
+  color: #4d4e53; /* Sets a muted text color */
+  background-color: #e4dedeca; /* Applies a light, slightly transparent background */
+  font-family: "Playfair Display", serif; /* Font style for readability */
+  line-height: 1.5; /* Sets standard line spacing for improved readability */
+}
+
+/* Styling for fixed sidebar navigation */
+#navbar {
+  position: fixed; /* Keeps navbar fixed on the left side */
+  min-width: 290px; /* Ensures navbar doesn’t shrink too much on small screens */
+  top: 0px; /* Positions navbar at the top of the viewport */
+  left: 0px; /* Aligns navbar to the left edge */
+  width: 300px; /* Sets consistent width for the sidebar */
+  height: 100%; /* Stretches navbar to full height */
+  border-right: solid; /* Adds a right border to distinguish navbar from content */
+  border-color: rgba(0, 22, 22, 0.4); /* Sets a subtle border color */
+}
+
+/* General header styling within the navbar */
+header {
+  color: black; /* Sets header text color */
+  margin: 10px; /* Adds margin around the header */
+  text-align: center; /* Centers the header text */
+  font-size: 1.8em; /* Increases font size for prominence */
+  font-weight: thin; /* Uses a light font weight */
+}
+
+/* Styling for headers in the main documentation content */
+#main-doc header {
+  text-align: left; /* Aligns text to the left within main content */
+  margin: 0px; /* Removes extra margin for alignment */
+}
+
+/* Styling for navbar list container */
+#navbar ul {
+  height: 88%; /* Allows space for the header */
+  padding: 0; /* Removes default padding */
+  overflow-y: auto; /* Enables scrolling if content exceeds view height */
+  overflow-x: hidden; /* Prevents horizontal scroll */
+  background-color: #e4dedeca; /* Sets a matching background color */
+}
+
+/* Styling for each list item within the navbar */
+#navbar li {
+  color: #4d4e53; /* Text color for items */
+  border-top: 1px solid; /* Adds a top border to separate items */
+  list-style: none; /* Removes default bullet points */
+  position: relative; /* For potential positioning adjustments */
+  width: 100%; /* Full width for list items */
+}
+
+/* Navbar link styling */
+#navbar a {
+  display: block; /* Full clickable area for links */
+  padding: 10px 30px; /* Adds padding around links for accessibility */
+  color: #4d4e53; /* Text color for links */
+  text-decoration: none; /* Removes underline from links */
+  cursor: pointer; /* Shows pointer cursor on hover */
+}
+
+/* Main content container styling */
+#main-doc {
+  position: absolute; /* Allows positioning independent of flow */
+  margin-left: 310px; /* Offsets main content to make room for navbar */
+  padding: 20px; /* Adds padding around main content */
+  margin-bottom: 110px; /* Adds space at the bottom */
+}
+
+/* Styling for articles within sections */
+section article {
+  color: #4d4e53; /* Sets consistent text color */
+  margin: 15px; /* Adds margin for spacing */
+  font-size: 0.96em; /* Slightly reduces font size for readability */
+}
+
+/* List item styling within sections */
+section li {
+  margin: 15px 0px 0px 20px; /* Adds left margin for indentation */
+}
+
+/* Styling for code blocks within the main content */
+code {
+  display: block; /* Makes code block occupy full width */
+  text-align: left; /* Aligns text to the left */
+  white-space: pre-line; /* Preserves line breaks in code */
+  position: relative; /* Allows independent positioning */
+  word-break: normal; /* Prevents breaking within words */
+  word-wrap: normal; /* Ensures code wraps properly */
+  line-height: 2; /* Increases line height for readability */
+  background-color: #f7f7f7; /* Adds a light background to highlight code */
+  padding: 15px; /* Padding around code block */
+  margin: 10px; /* Margin around code block */
+  border-radius: 5px; /* Rounds corners for visual appeal */
+}
+
+/* Styling adjustments for smaller screens (max width 815px) */
+@media only screen and (max-width: 815px) {
+  /* Limits navbar list height for smaller screens */
+  #navbar ul {
+    border: 1px solid; /* Adds a border to separate content */
+    height: 207px; /* Limits height for mobile view */
+  }
+
+  #navbar {
+    background-color: white; /* Ensures contrast on small screens */
+    position: absolute; /* Changes position to allow dropdown effect */
+    top: 0; /* Aligns navbar to top of the page */
+    padding: 0; /* Removes padding */
+    margin: 0; /* Removes margin */
+    width: 100%; /* Full width on mobile */
+    max-height: 275px; /* Restricts height */
+    border: none; /* Removes default border */
+    z-index: 1; /* Ensures navbar appears above content */
+    border-bottom: 2px solid; /* Adds border at bottom for separation */
+  }
+
+  #main-doc {
+    position: relative; /* Adjusts position to accommodate navbar */
+    margin-left: 0px; /* Removes left margin */
+    margin-top: 270px; /* Adds top margin for content spacing */
+  }
+}
+
+/* Further adjustments for very small screens (max width 400px) */
+@media only screen and (max-width: 400px) {
+  #main-doc {
+    margin-left: -10px; /* Adjusts left margin */
+  }
+
+  code {
+    margin-left: -20px; /* Shifts code block left */
+    width: 100%; /* Full width for code block */
+    padding: 15px; /* Padding around code */
+    padding-left: 10px; /* Adjusts left padding */
+    padding-right: 45px; /* Increases right padding */
+    min-width: 233px; /* Sets minimum width for readability */
+  }
+}
+
+/* Background color for the navbar header section */
+#navbar header {
+    background-color: #e4dedeca; /* Matches overall theme */
+}
