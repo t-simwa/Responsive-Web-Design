@@ -1,0 +1,96 @@
+html {
+  font-size: 10px; /* Sets the base font size to 10px, making rem units easy to scale */
+}
+
+body {  
+  font-family: "Playfair Display", serif; /* Applies Playfair Display as the primary font */
+  font-size: 1.6rem; /* Sets the default font size for body text to 1.6rem (16px) */
+  line-height: 1.5; /* Sets line spacing for readability */
+  text-align: center; /* Centers all text content within the body */
+  color: #333; /* Sets the text color to a dark grey */
+  margin: 0; /* Removes default body margin for consistent layout */
+}
+
+h1 {
+  font-size: 4rem; /* Sets a large font size for the main title */
+  margin-bottom: 0; /* Removes bottom margin for tighter spacing */
+}
+
+@media (max-width: 460px) {
+  h1 {
+      font-size: 3.5rem; /* Reduces h1 size on smaller screens for better fit */
+      line-height: 1.2; /* Adjusts line height for better readability on small screens */
+  }
+}
+
+h3 {
+  font-size: 2.5rem; /* Sets font size for h3 elements */
+}
+
+a {
+  color: #477ca7; /* Applies a blue color to links */
+  text-decoration: none; /* Removes underline from links */
+}
+
+a:visited {
+  color: #74638f; /* Changes the color for visited links to a purple shade */
+}
+
+#main {
+  margin: 30px 8px; /* Adds outer spacing around the main content container */
+  padding: 15px; /* Adds inner padding for a balanced layout */
+  border-radius: 5px; /* Rounds the corners for a softer look */
+  background: #eee; /* Sets a light grey background for the main section */
+}
+
+@media (max-width: 460px) {
+  #main {
+      margin: 0; /* Removes margin on smaller screens for a full-width layout */
+  }
+}
+
+img {
+  max-width: 100%; /* Ensures image does not exceed its container's width */
+  display: block; /* Removes inline spacing around images */
+  height: auto; /* Keeps image aspect ratio intact */
+  margin: 0 auto; /* Centers the image horizontally */
+}
+
+#img-div {
+  background: white; /* Sets a white background for the image container */
+  padding: 10px; /* Adds padding around the image */
+  margin: 0; /* Removes any default margin */
+}
+
+#img-caption {
+  margin: 15px 0 5px 0; /* Adds spacing around the image caption */
+}
+
+@media (max-width: 460px) {
+  #img-caption {
+      font-size: 1.4rem; /* Reduces font size on smaller screens */
+  }
+}
+
+#headline {
+  margin: 50px 0; /* Adds vertical spacing around the headline */
+  text-align: center; /* Centers the headline text */
+}
+
+ul {
+  max-width: 550px; /* Limits the width for better readability */
+  margin: 0 auto 60px auto; /* Centers the list and adds spacing below */
+  text-align: left; /* Aligns list items to the left */
+  line-height: 1.6; /* Increases line height for readability */
+}
+
+li {
+  margin: 16px 0; /* Adds spacing between list items */
+}
+
+blockquote {
+  font-style: italic; /* Applies italic style to the quote text */
+  max-width: 545px; /* Limits width to enhance readability */
+  margin: 0 auto 50px auto; /* Centers the blockquote with bottom spacing */
+  text-align: center; /* Centers the text within the blockquote */
+}
