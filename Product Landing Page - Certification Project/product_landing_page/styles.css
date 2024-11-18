@@ -1,0 +1,683 @@
+/* Global font update */
+@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap';
+/* Import Poppins font from Google Fonts */
+
+* {
+    margin: 0;
+    /* Reset margin to 0 */
+    padding: 0;
+    /* Reset padding to 0 */
+    box-sizing: border-box;
+    /* Set box-sizing to border-box */
+}
+
+body {
+    background-color: #fff8e1;
+    /* Set background color to soft creamy color */
+    font-family: 'Poppins', sans-serif;
+    /* Set font family to Poppins */
+    color: #5d4037;
+    /* Set text color to dark milk brown */
+}
+
+#page-wrapper {
+    position: relative;
+    /* Set position to relative */
+}
+
+li {
+    list-style: none;
+    /* Remove default list style */
+}
+
+a {
+    color: #7b4f24;
+    /* Set link color to warm milk brown */
+    text-decoration: none;
+    /* Remove default text decoration */
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Add transition effect */
+}
+
+a:hover {
+    color: #4e342e;
+    /* Set link hover color to slightly darker brown */
+    transform: translateY(-3px);
+    /* Add lift effect on hover */
+}
+
+.container {
+    max-width: 1000px;
+    /* Set maximum width to 1000px */
+    width: 100%;
+    /* Set width to 100% */
+    margin: 0 auto;
+    /* Center horizontally */
+    padding: 0 20px;
+    /* Add padding */
+}
+
+.btn {
+    padding: 12px 25px;
+    /* Add padding */
+    font-size: 1em;
+    /* Set font size to 1em */
+    font-weight: 600;
+    /* Set font weight to 600 */
+    text-transform: uppercase;
+    /* Convert text to uppercase */
+    border: none;
+    /* Remove default border */
+    border-radius: 5px;
+    /* Add border radius */
+    background: #fbc02d;
+    /* Set background color to pastel yellow */
+    color: #fff;
+    /* Set text color to white */
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Add transition effect */
+}
+
+.btn:hover {
+    background: #f57f17;
+    /* Set background color to warm yellow on hover */
+    transform: scale(1.05);
+    /* Add scaling effect on hover */
+}
+
+/* Header Styling */
+header {
+    position: sticky;
+    /* Set position to sticky */
+    top: 0;
+    /* Set top position to 0 */
+    z-index: 10;
+    /* Set z-index to 10 */
+    min-height: 75px;
+    /* Set minimum height to 75px */
+    padding: 15px 20px;
+    /* Add padding */
+    display: flex;
+    /* Display as flex container */
+    justify-content: space-evenly;
+    /* Justify content to space evenly */
+    align-items: center;
+    /* Align items to center */
+    background: #f9e79f;
+    /* Set background color to light milk yellow */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    /* Add box shadow */
+}
+
+header img.logo-img {
+    height: 100px;
+    /* Set height to 100px */
+    max-width: 190px;
+    /* Set maximum width to 190px */
+    width: 130px;
+    /* Set width to 130px */
+    /* Keep logo's height constrained */
+}
+
+nav ul {
+    display: flex;
+    /* Display as flex container */
+    gap: 10px;
+    /* Add gap between items */
+    margin-left: 125px;
+    /* Add margin to left */
+}
+
+header ul li {
+    display: flex;
+    /* Display as flex container */
+    align-items: right;
+    /* Align items to right */
+}
+
+nav ul li a {
+    font-size: 0.95em;
+    /* Set font size to 0.95em */
+    color: #7b4f24;
+    /* Set link color to warm milk brown */
+    font-weight: 500;
+    /* Set font weight to 500 */
+    padding: 8px 15px;
+    /* Add padding */
+    border-radius: 5px;
+    /* Add border radius */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Add transition effect */
+}
+
+nav ul li a:hover {
+    background-color: #fbc02d;
+    /* Set background color to pastel yellow on hover */
+    color: #fff;
+    /* Set text color to white on hover */
+    transform: scale(1.1);
+    /* Add scaling effect on hover */
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    /* Display as flex container */
+    flex-direction: column;
+    /* Set flex direction to column */
+    align-items: center;
+    /* Align items to center */
+    justify-content: center;
+    /* Justify content to center */
+    text-align: center;
+    /* Center text */
+    height: 350px;
+    /* Set height to 350px */
+    background: #f0f4c3;
+    /* Set background color to light pastel green */
+    color: #7b4f24;
+    /* Set text color to warm milk brown */
+    padding: 30px;
+    /* Add padding */
+    box-shadow: inset 0px 3px 10px rgba(0, 0, 0, 0.2);
+    /* Add box shadow */
+}
+
+#hero h2 {
+    font-size: 2.5em;
+    /* Set font size to 2.5em */
+    margin-bottom: 30px;
+    /* Add margin to bottom */
+    font-weight: 600;
+    /* Set font weight to 600 */
+}
+
+#hero input[type='email'] {
+    max-width: 320px;
+    /* Set maximum width to 320px */
+    width: 100%;
+    /* Set width to 100% */
+    padding: 12px;
+    /* Add padding */
+    margin-bottom: 15px;
+    /* Add margin to bottom */
+    border: 2px solid #fff;
+    /* Set border to 2px solid white */
+    border-radius: 5px;
+    /* Add border radius */
+    background: rgba(255, 255, 255, 0.9);
+    /* Set background color to semi-transparent white */
+}
+
+#hero input[type='submit'] {
+    border-radius: 5px;
+    /* Add border radius */
+    background-color: #fbc02d;
+    /* Set background color to pastel yellow */
+    color: #fff;
+    /* Set text color to white */
+    font-weight: bold;
+    /* Set font weight to bold */
+}
+
+#hero input[type='submit']:hover {
+    background-color: #f57f17;
+    /* Set background color to warm yellow on hover */
+}
+
+/* Features Section */
+#features {
+    margin-top: 80px;
+    /* Add margin to top */
+    padding: 60px 0;
+    /* Add padding */
+    background: #fff;
+    /* Set background color to white */
+    border-radius: 10px;
+    /* Add border radius */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Add box shadow */
+}
+
+#features h2 {
+    text-align: center;
+    /* Center text */
+    margin-bottom: 40px;
+    /* Add margin to bottom */
+    font-size: 2.5em;
+    /* Set font size to 2.5em */
+    font-weight: 600;
+    /* Set font weight to 600 */
+    color: #7b4f24;
+    /* Set text color to warm milk brown */
+}
+
+.grid {
+    display: grid;
+    /* Display as grid container */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Set grid template columns */
+    gap: 40px;
+    /* Add gap between items */
+    padding: 20px;
+    /* Add padding */
+}
+
+.icon {
+    display: flex;
+    /* Display as flex container */
+    align-items: center;
+    /* Align items to center */
+    justify-content: center;
+    /* Justify content to center */
+    font-size: 3.5em;
+    /* Set font size to 3.5em */
+    color: #7b4f24;
+    /* Set text color to warm milk brown */
+    transition: transform 0.3s ease;
+    /* Add transition effect */
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    /* Add scaling effect on hover */
+}
+
+.desc {
+    text-align: center;
+    /* Center text */
+}
+
+.desc h3 {
+    font-size: 1.7em;
+    /* Set font size to 1.7em */
+    margin-bottom: 20px;
+    /* Add margin to bottom */
+    font-weight: 600;
+    /* Set font weight to 600 */
+    color: #7b4f24;
+    /* Set text color to warm milk brown */
+}
+
+.desc p {
+    color: #5d4037;
+    /* Set text color to dark milk brown */
+    font-size: 1.1em;
+    /* Set font size to 1.1em */
+    line-height: 1.6;
+    /* Set line height to 1.6 */
+}
+
+/* Products Section */
+#our-products {
+    margin-top: 80px;
+    /* Add margin to top */
+    padding: 60px 0;
+    /* Add padding */
+    background: #fff;
+    /* Set background color to white */
+    border-radius: 10px;
+    /* Add border radius */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Add box shadow */
+}
+
+#our-products h2 {
+    text-align: center;
+    /* Center text */
+    font-size: 2.5em;
+    /* Set font size to 2.5em */
+    font-weight: 600;
+    /* Set font weight to 600 */
+    margin-bottom: 40px;
+    /* Add margin to bottom */
+    color: #7b4f24;
+    /* Set text color to warm milk brown */
+}
+
+.product {
+    background: #fff;
+    /* Set background color to white */
+    border-radius: 10px;
+    /* Add border radius */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Add box shadow */
+    padding: 20px;
+    /* Add padding */
+    text-align: center;
+    /* Center text */
+    transition: transform 0.3s ease;
+    /* Add transition effect */
+    margin-bottom: 40px;
+    /* Add margin to bottom */
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    /* Add lift effect on hover */
+}
+
+.product .level {
+    background: #fbc02d;
+    /* Set background color to pastel yellow */
+    color: #fff;
+    /* Set text color to white */
+    padding: 15px 0;
+    /* Add padding */
+    border-radius: 5px 5px 0 0;
+    /* Add border radius */
+    font-weight: bold;
+    /* Set font weight to bold */
+}
+
+.product button {
+    margin-top: 20px;
+    /* Add margin to top */
+    background-color: #7b4f24;
+    /* Set background color to warm milk brown */
+    color: #fff;
+    /* Set text color to white */
+    font-size: 1.1em;
+    /* Set font size to 1.1em */
+    transition: background-color 0.3s ease;
+    /* Add transition effect */
+    padding: 15px 25px;
+    /* Add padding */
+}
+
+.product button:hover {
+    background-color: #4e342e;
+    /* Set background color to darker brown on hover */
+}
+
+.product ol {
+    text-align: center;
+    /* Center text */
+    color: #555;
+    /* Set text color to dark gray */
+    margin: 10px 0;
+    /* Add margin */
+}
+
+.product button {
+    margin-top: 20px;
+    /* Add margin to top */
+    background-color: #7b4f24;
+    /* Set background color to warm milk brown */
+    color: #fff;
+    /* Set text color to white */
+    font-size: 1em;
+    /* Set font size to 1em */
+    border: none;
+    /* Remove default border */
+    border-radius: 5px;
+    /* Add border radius */
+    padding: 10px 20px;
+    /* Add padding */
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease;
+    /* Add transition effect */
+}
+
+.product button:hover {
+    background-color: #e67e22;
+    /* Set background color to warm orange on hover */
+}
+
+/* The Benefits of Milk Section */
+#the-benefits-of-milk {
+    margin-top: 80px;
+    /* Add margin to top */
+    padding: 60px 0;
+    /* Add padding */
+    background: #fff;
+    /* Set background color to white */
+    border-radius: 10px;
+    /* Add border radius */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Add box shadow */
+}
+
+#the-benefits-of-milk h2 {
+    text-align: center;
+    /* Center text */
+    font-size: 2.5em;
+    /* Set font size to 2.5em */
+    font-weight: 600;
+    /* Set font weight to 600 */
+    margin-bottom: 40px;
+    /* Add margin to bottom */
+    color: #7b4f24;
+    /* Set text color to warm milk brown */
+}
+
+#the-benefits-of-milk iframe {
+    display: block;
+    /* Display as block element */
+    margin: 0 auto;
+    /* Center horizontally */
+    border-radius: 10px;
+    /* Add border radius */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Add box shadow */
+}
+
+/* Why Choose Hampy's Section */
+#why-choose-hampys {
+    margin-top: 80px;
+    /* Add margin to top */
+    padding: 60px 0;
+    /* Add padding */
+    background: #fff;
+    /* Set background color to white */
+    border-radius: 10px;
+    /* Add border radius */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Add box shadow */
+}
+
+#why-choose-hampys h2 {
+    text-align: center;
+    /* Center text */
+    font-size: 2.5em;
+    /* Set font size to 2.5em */
+    font-weight: 600;
+    /* Set font weight to 600 */
+    margin-bottom: 40px;
+    /* Add margin to bottom */
+    color: #7b4f24;
+    /* Set text color to warm milk brown */
+}
+
+blockquote {
+    font-style: italic;
+    /* Set font style to italic */
+    font-size: 1.3em;
+    /* Set font size to 1.3em */
+    color: #5d4037;
+    /* Set text color to dark milk brown */
+    margin: 0 auto;
+    /* Center horizontally */
+    max-width: 800px;
+    /* Set maximum width to 800px */
+    padding: 25px;
+    /* Add padding */
+    background: #f9e79f;
+    /* Set background color to light milk yellow */
+    border-left: 5px solid #f57f17;
+    /* Add border to left */
+    margin-bottom: 40px;
+    /* Add margin to bottom */
+    border-radius: 5px;
+    /* Add border radius */
+    line-height: 1.8;
+    /* Set line height to 1.8 */
+}
+
+blockquote cite {
+    display: block;
+    /* Display as block element */
+    text-align: right;
+    /* Align text to right */
+    font-size: 1.2em;
+    /* Set font size to 1.2em */
+    color: #7b4f24;
+    /* Set text color to warm milk brown */
+    font-weight: 600;
+    /* Set font weight to 600 */
+    margin-top: 15px;
+    /* Add margin to top */
+}
+
+footer {
+    margin-top: 80px;
+    /* Add margin to top */
+    background-color: #7b4f24;
+    /* Set background color to warm milk brown */
+    color: #fff;
+    /* Set text color to white */
+    text-align: center;
+    /* Center text */
+    padding: 30px;
+    /* Add padding */
+    font-size: 1em;
+    /* Set font size to 1em */
+}
+
+footer ul {
+    display: flex;
+    /* Display as flex container */
+    justify-content: center;
+    /* Justify content to center */
+    gap: 30px;
+    /* Add gap between items */
+    padding-bottom: 20px;
+    /* Add padding to bottom */
+}
+
+footer ul li a {
+    color: #fbc02d;
+    /* Set link color to pastel yellow */
+}
+
+footer ul li a:hover {
+    color: #f57f17;
+    /* Set link hover color to warm yellow */
+}
+
+footer span {
+    display: block;
+    /* Display as block element */
+    margin-top: 20px;
+    /* Add margin to top */
+}
+
+/* Mobile view adjustments */
+@media screen and (max-width: 768px) {
+
+    /* Header adjustments */
+    header {
+        flex-direction: column;
+        /* Set flex direction to column on mobile */
+        text-align: center;
+        /* Center text on mobile */
+        padding: 10px 15px;
+        /* Reduce padding on mobile */
+    }
+
+    header img {
+        max-width: 80px;
+        /* Reduce maximum width of logo image on mobile */
+    }
+
+    /* Nav list adjustments */
+    nav ul {
+        flex-direction: column;
+        /* Set flex direction to column on mobile */
+        gap: 10px;
+        /* Reduce gap between nav items on mobile */
+    }
+
+    /* Container adjustments */
+    .container {
+        padding: 0 10px;
+        /* Reduce padding on mobile */
+    }
+
+    /* Hero Section adjustments */
+    #hero {
+        height: auto;
+        /* Set height to auto on mobile */
+        padding: 30px 15px;
+        /* Reduce padding on mobile */
+    }
+
+    /* Grid Layout adjustments */
+    .grid {
+        grid-template-columns: 1fr;
+        /* Set grid template columns to 1fr on mobile */
+    }
+
+    /* Footer Section adjustments */
+    footer {
+        padding: 20px 0;
+        /* Reduce padding on mobile */
+    }
+}
+
+/* Tablet view adjustments */
+@media screen and (max-width: 1024px) {
+
+    /* Header adjustments */
+    header {
+        padding: 15px 20px;
+        /* Standard padding for tablet */
+    }
+
+    header img {
+        max-width: 90px;
+        /* Adjust maximum width of logo image for tablets */
+    }
+
+    /* Nav list adjustments */
+    nav ul {
+        gap: 20px;
+        /* Maintain a good gap for tablet screens */
+    }
+
+    /* Grid layout adjustments */
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Two columns layout for tablet */
+    }
+}
+
+/* Desktop and larger screen adjustments */
+@media screen and (min-width: 1025px) {
+
+    /* Header adjustments */
+    header {
+        padding: 20px 30px;
+        /* More padding for larger screens */
+    }
+
+    header img {
+        max-width: 120px;
+        /* Larger image for desktop */
+    }
+
+    /* Nav list adjustments */
+    nav ul {
+        gap: 30px;
+        /* Larger gap between nav items */
+    }
+
+    /* Grid layout adjustments */
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* Three columns layout for desktop */
+    }
+}

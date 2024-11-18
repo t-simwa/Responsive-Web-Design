@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External stylesheet for Font Awesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <!-- Link to internal styles.css for custom styles -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div id="page-wrapper">
+        <!-- Main header section with logo and navigation links -->
+        <header id="title">
+            <div class="logo">
+                <!-- Logo image for Hampy's Milk Shop -->
+                <img src="hampys.png" alt="Hampy's Logo" class="logo-img">
+            </div>
+            <nav id="nav-bar">
+                <!-- Navigation bar with links to different sections -->
+                <ul>
+                    <li><a class="nav-link" href="#features">Features</a></li>
+                    <li><a class="nav-link" href="#the-benefits-of-milk">The Benefits of Milk</a></li>
+                    <li><a class="nav-link" href="#our-products">Our Products</a></li>
+                    <li><a class="nav-link" href="#why-choose-hampys">Why Choose Hampy's</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="container"></div>
+
+        <!-- Hero section with a call to action for email subscription -->
+        <section id="hero">
+            <h2>Fresh, farm-to-table dairy goodness</h2>
+            <!-- Form for collecting user email -->
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+                <input name="email" id="email" type="email" placeholder="Enter your email address" required>
+                <input id="submit" type="submit" value="Get Started" class="btn">
+            </form>
+        </section>
+
+        <div class="container">
+            <!-- Features section showcasing Hampy's product offerings -->
+            <section id="features">
+                <h2>Features</h2>
+
+                <div class="space"></div>
+
+                <div class="grid">
+                    <!-- Organic Ingredients Feature -->
+                    <div class="icon"><i class="fa fa-3x fa-leaf"></i></div>
+                    <div class="desc">
+                        <h3>Organic Ingredients</h3>
+                        <p>
+                            Our milk is sourced from grass-fed cows on local farms. Each bottle is packed with nutrients
+                            and free from artificial additives.
+                        </p>
+                    </div>
+                    <!-- Fast Delivery Feature -->
+                    <div class="icon"><i class="fa fa-3x fa-truck"></i></div>
+                    <div class="desc">
+                        <h3>Fast Delivery</h3>
+                        <p>
+                            We ensure your milk is delivered fresh within hours of bottling. Free returns are available
+                            if you’re not satisfied.
+                        </p>
+                    </div>
+                    <!-- Quality Assurance Feature -->
+                    <div class="icon"><i class="fa fa-3x fa-check-circle"></i></div>
+                    <div class="desc">
+                        <h3>Quality Assurance</h3>
+                        <p>
+                            Every batch is thoroughly tested for freshness, taste, and purity to meet the highest
+                            standards.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- The Benefits of Milk section with embedded YouTube video -->
+            <section id="the-benefits-of-milk">
+                <h2>The Benefits of Milk</h2>
+                <div class="space"></div>
+                <iframe width="400" height="315" src="https://www.youtube.com/embed/8e3G_t-2fmU?si=P46NNHAyGsCg5oTH"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </section>
+
+            <!-- Our Products section with product details -->
+            <section id="our-products">
+                <h2>Our Products</h2>
+
+                <div class="space"></div>
+
+                <!-- Individual product blocks -->
+                <div class="product" id="whole-milk">
+                    <div class="level">Whole Milk</div>
+                    <h2>$4 per gallon</h2>
+                    <ol>
+                        <li>Rich, creamy taste</li>
+                        <li>Perfect for drinking or cooking</li>
+                        <li>Packed with vitamins and minerals</li>
+                    </ol>
+                    <button class="btn">Select</button>
+                </div>
+                <div class="product" id="almond-milk">
+                    <div class="level">Almond Milk</div>
+                    <h2>$6 per gallon</h2>
+                    <ol>
+                        <li>Dairy-free and plant-based</li>
+                        <li>Subtle nutty flavor</li>
+                        <li>Great for smoothies and coffee</li>
+                    </ol>
+                    <button class="btn">Select</button>
+                </div>
+                <div class="product" id="chocolate-milk">
+                    <div class="level">Chocolate Milk</div>
+                    <h2>$5 per gallon</h2>
+                    <ol>
+                        <li>Made with real cocoa</li>
+                        <li>A sweet treat for any occasion</li>
+                        <li>Loved by kids and adults alike</li>
+                    </ol>
+                    <button class="btn">Select</button>
+                </div>
+                <div class="product" id="oat-milk">
+                    <div class="level">Oat Milk</div>
+                    <h2>$7 per gallon</h2>
+                    <ol>
+                        <li>Naturally lactose-free</li>
+                        <li>Smooth and slightly sweet</li>
+                        <li>Perfect for lattes and cereals</li>
+                    </ol>
+                    <button class="btn">Select</button>
+                </div>
+            </section>
+
+            <div class="space"></div>
+            <div class="space"></div>
+
+            <!-- Why Choose Hampy's section with a testimonial -->
+            <section id="why-choose-hampys">
+                <h2>Why Choose Hampy’s?</h2>
+
+                <div class="space"></div>
+
+                <!-- Testimonial quote from the CEO -->
+                <blockquote cite="https://en.wikipedia.org/wiki/Bob_Marley">
+                    <p>"At Hampy’s Milk Shop, we believe in providing the freshest, healthiest dairy products to our
+                        customers. Every bottle reflects our passion for quality and sustainability."</p>
+                    <cite>Ted Simwa - CEO, Hampy's Milk Shop</cite>
+                </blockquote>
+            </section>
+
+            <!-- Footer with links to Privacy, Terms, and Contact -->
+            <footer>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <span>Copyright 2024, Hampy's Milk Shop</span>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
