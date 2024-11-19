@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Declares the document type and specifies the language of the document as English -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Sets the character encoding to UTF-8 for better compatibility with special characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes the site responsive by setting the viewport width to the device's width -->
+    <title>Personal Portfolio</title>
+    <!-- Sets the title that appears in the browser tab -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- Links the external CSS file that contains the styling rules -->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Links Font Awesome for using icons in the site -->
+</head>
+
+<body>
+    <nav id="navbar" class="nav">
+        <!-- The navigation bar section -->
+        <ul class="nav-list">
+            <li><a href="#welcome-section">About</a></li>
+            <!-- Navigation link to the About section -->
+            <li><a href="#projects">Projects</a></li>
+            <!-- Navigation link to the Projects section -->
+            <li><a href="#contact">Contact</a></li>
+            <!-- Navigation link to the Contact section -->
+        </ul>
+    </nav>
+
+    <section id="welcome-section" class="welcome-section">
+        <!-- The Welcome/Introduction section -->
+        <h1>Hey, I am Nsizwe</h1>
+        <!-- Heading displaying the name -->
+        <p>A web developer</p>
+        <!-- Paragraph with a short description -->
+    </section>
+
+    <section id="projects" class="projects-section">
+        <!-- The Projects section -->
+        <h2 class="projects-section-header">Below are some of my projects</h2>
+        <!-- Heading for the projects section -->
+
+        <div class="projects-grid">
+            <!-- Grid layout to display project tiles -->
+            <a href="https://codepen.io/freeCodeCamp/full/zNqgVx" target="_blank" class="project project-tile">
+                <!-- Link to an external project page with a clickable tile -->
+                <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg"
+                    alt="Tribute Page">
+                <!-- Image representing the project -->
+                <p class="project-title">
+                    <span class="code">&lt;</span> Tribute Page <span class="code">&#47;&gt;</span>
+                </p>
+                <!-- Project title -->
+            </a>
+            <!-- Repeat similar structure for other projects -->
+        </div>
+
+        <a href="https://codepen.io/FreeCodeCamp/" class="btn btn-show-all" target="_blank">
+            Show all
+            <!-- Button linking to show all projects -->
+            <i class="fas fa-chevron-right"></i>
+            <!-- Font Awesome icon used in the button -->
+        </a>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <!-- The Contact section -->
+        <div class="contact-section-header">
+            <h2>Let's work together...</h2>
+            <!-- Heading inviting collaboration -->
+            <p>How do you take your coffee?</p>
+            <!-- Lighthearted text for engagement -->
+        </div>
+        <div class="contact-links">
+            <!-- List of contact links -->
+            <a href="https://facebook.com/ted-simwa" target="_blank" class="btn contact-details">
+                <i class="fab fa-facebook-square"></i> Facebook
+                <!-- Contact link with Facebook icon -->
+            </a>
+            <!-- Similar structure for GitHub, Twitter, Email, and Call -->
+        </div>
+    </section>
+
+    <footer>
+        <!-- Footer section with creator information -->
+        <p>
+            &copy; Created by
+            <a href="https://github.com/t-simwa" target="_blank">Ted Simwa</a>
+            <!-- A link to the creator’s GitHub -->
+        </p>
+    </footer>
+</body>
+
+</html>

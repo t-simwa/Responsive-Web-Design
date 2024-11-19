@@ -1,0 +1,298 @@
+/* General styles */
+* {
+    margin: 0;
+    /* Reset margin for all elements */
+    padding: 0;
+    /* Reset padding for all elements */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    /* Set font family to Arial for the entire page */
+    line-height: 1.6;
+    /* Set default line height for better readability */
+    color: #333;
+    /* Dark gray text color for contrast and readability */
+}
+
+/* Navbar styles */
+.nav {
+    position: sticky;
+    /* Keeps the navbar fixed at the top when scrolling */
+    top: 0;
+    /* Position at the very top of the viewport */
+    background: #333;
+    /* Dark gray background for the navbar */
+    padding: 10px 20px;
+    /* Add padding inside the navbar for spacing */
+    z-index: 1000;
+    /* Ensure the navbar stays on top of other elements */
+}
+
+.nav-list {
+    list-style: none;
+    /* Remove default list styling (bullets or numbers) */
+    display: flex;
+    /* Arrange list items in a horizontal row */
+    justify-content: center;
+    /* Center-align the list items */
+    gap: 20px;
+    /* Add spacing between list items */
+}
+
+.nav-list a {
+    color: white;
+    /* White text color for contrast against the dark background */
+    text-decoration: none;
+    /* Remove underline from links */
+    font-size: 1.2rem;
+    /* Slightly larger font size for better visibility */
+    transition: color 0.3s;
+    /* Smooth transition for color change on hover */
+}
+
+.nav-list a:hover {
+    color: #f4a261;
+    /* Change link color to a warm orange on hover */
+}
+
+/* Welcome section */
+#welcome-section {
+    display: flex;
+    /* Use flexbox for centering content */
+    flex-direction: column;
+    /* Stack items vertically */
+    justify-content: center;
+    /* Center content vertically */
+    align-items: center;
+    /* Center content horizontally */
+    height: 100vh;
+    /* Make section fill the full height of the viewport */
+    text-align: center;
+    /* Center-align text */
+    background: linear-gradient(to right, #264653, #2a9d8f);
+    /* Gradient background with teal shades */
+    color: white;
+    /* White text color for contrast */
+}
+
+#welcome-section h1 {
+    font-size: 3rem;
+    /* Large font size for the main heading */
+}
+
+#welcome-section p {
+    font-size: 1.5rem;
+    /* Medium font size for the paragraph */
+    margin-top: 10px;
+    /* Add spacing above the paragraph */
+}
+
+/* Projects section */
+.projects-section {
+    padding: 50px 20px;
+    /* Add space inside the section for content */
+    background: #f4f4f4;
+    /* Light gray background for contrast */
+}
+
+.projects-section-header {
+    text-align: center;
+    /* Center-align the section heading */
+    font-size: 2.5rem;
+    /* Large font size for the section title */
+    margin-bottom: 20px;
+    /* Add spacing below the heading */
+}
+
+.projects-grid {
+    display: grid;
+    /* Use grid layout for project tiles */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Create responsive grid with minimum tile width of 250px */
+    gap: 20px;
+    /* Add spacing between grid items */
+}
+
+.project-tile {
+    text-decoration: none;
+    /* Remove underline from project links */
+    color: inherit;
+    /* Inherit text color from parent */
+    background: white;
+    /* White background for project tiles */
+    border-radius: 10px;
+    /* Rounded corners for tiles */
+    overflow: hidden;
+    /* Prevent content from spilling outside the tile */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Smooth transition for hover effects */
+    display: flex;
+    /* Use flexbox for layout */
+    flex-direction: column;
+    /* Stack tile content vertically */
+    align-items: center;
+    /* Center-align tile content horizontally */
+}
+
+.project-tile:hover {
+    transform: translateY(-5px);
+    /* Slight upward movement on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Add shadow effect on hover */
+}
+
+.project-image {
+    width: 100%;
+    /* Make image fill the width of the tile */
+    height: 150px;
+    /* Set fixed height for images */
+    object-fit: cover;
+    /* Ensure images maintain aspect ratio and cover the area */
+}
+
+.project-title {
+    text-align: center;
+    /* Center-align project titles */
+    padding: 15px;
+    /* Add padding around the title */
+    background: #2a9d8f;
+    /* Teal background for the title section */
+    color: white;
+    /* White text color for contrast */
+    font-size: 1.3rem;
+    /* Medium font size for the title */
+    width: 100%;
+    /* Make title span the full width of the tile */
+}
+
+/* Contact section */
+.contact-section {
+    padding: 50px 20px;
+    /* Add space inside the section */
+    text-align: center;
+    /* Center-align the content */
+    background: #264653;
+    /* Dark teal background */
+    color: white;
+    /* White text color for contrast */
+}
+
+.contact-section-header h2 {
+    font-size: 2.5rem;
+    /* Large font size for the section heading */
+    margin-bottom: 10px;
+    /* Add spacing below the heading */
+}
+
+.contact-section-header p {
+    font-size: 1.2rem;
+    /* Medium font size for the description */
+}
+
+.contact-links {
+    display: flex;
+    /* Use flexbox for layout */
+    justify-content: center;
+    /* Center-align the links */
+    flex-wrap: wrap;
+    /* Allow links to wrap to the next line */
+    gap: 20px;
+    /* Add spacing between links */
+    margin-top: 20px;
+    /* Add spacing above the links */
+}
+
+.contact-details {
+    text-decoration: none;
+    /* Remove underline from links */
+    color: white;
+    /* White text color for contrast */
+    background: #2a9d8f;
+    /* Teal background for contact buttons */
+    padding: 15px 20px;
+    /* Add padding inside the button */
+    border-radius: 30px;
+    /* Rounded button shape */
+    font-size: 1.2rem;
+    /* Medium font size for text */
+    display: flex;
+    /* Use flexbox for layout */
+    align-items: center;
+    /* Center-align icon and text vertically */
+    gap: 10px;
+    /* Add spacing between icon and text */
+    transition: background 0.3s, transform 0.2s;
+    /* Smooth transition for hover effects */
+}
+
+.contact-details:hover {
+    background: #f4a261;
+    /* Change background color to orange on hover */
+    transform: scale(1.05);
+    /* Slight scaling effect on hover */
+}
+
+.contact-details i {
+    font-size: 1.5rem;
+    /* Larger font size for icons */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    /* Center-align footer content */
+    padding: 20px;
+    /* Add padding inside the footer */
+    background: #333;
+    /* Dark gray background */
+    color: white;
+    /* White text color for contrast */
+    font-size: 1rem;
+    /* Standard font size for footer text */
+}
+
+footer a {
+    color: #2a9d8f;
+    /* Teal link color */
+    text-decoration: none;
+    /* Remove underline from links */
+    font-weight: bold;
+    /* Make links bold for emphasis */
+    transition: color 0.3s;
+    /* Smooth transition for hover effect */
+}
+
+footer a:hover {
+    color: #f4a261;
+    /* Change link color to orange on hover */
+}
+
+footer p {
+    margin: 5px 0;
+    /* Add spacing above and below footer paragraphs */
+}
+
+/* Media Query for small screens */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        /* Stack project tiles in a single column */
+    }
+
+    .contact-details {
+        width: 100%;
+        /* Make contact buttons span the full width */
+        text-align: center;
+        /* Center-align button content */
+        justify-content: center;
+        /* Center-align button elements */
+    }
+
+    .nav-list {
+        flex-direction: column;
+        /* Stack navigation links vertically */
+    }
+}
